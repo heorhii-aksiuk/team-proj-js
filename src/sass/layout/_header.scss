@@ -28,6 +28,7 @@
     align-items: center;
   
     &__img {
+        background-color: cadetblue;
       display: block;
       border-radius: 5px;
     }
@@ -107,6 +108,7 @@
   }
   
   .search-form__button .button__img {
+      background-color: cadetblue;
     position: absolute;
     bottom: 0;
     left: 0;
