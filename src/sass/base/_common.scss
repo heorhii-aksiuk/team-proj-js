@@ -1,3 +1,40 @@
-body {
-  font-family: 'Roboto', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+// изменить цвета на переменные когда они будут созданы
