@@ -1,0 +1,58 @@
+.button {
+  display: inline-block;
+  padding-top: 14px;
+  padding-bottom: 12px;
+  padding-left: 36.19px;
+  padding-right: 36.19px;
+  min-width: 129.53px;
+
+  @media screen and (min-width: $tablet) {
+    padding-left: 38px;
+    padding-right: 38px;
+    min-width: 136px;
+  }
+
+  font-weight: normal;
+  line-height: normal;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $white-text-color;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+
+  &:hover,
+  :focus,
+  :active {
+    border: 1px solid #ff6b01;
+    background: #ff6b01;
+    box-shadow: (0px 8px 43px rgba(255, 107, 1, 0.6));
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    cursor: pointer;
+  }
+
+  &__active {
+    border: 1px solid #ff6b01;
+    background: #ff6b01;
+    box-shadow: (0px 8px 43px rgba(255, 107, 1, 0.6));
+  }
+}
+
+.button {
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+
+  &:hover,
+  :focus,
+  :active {
+    color: white;
+    border: 1px solid #ff6b01;
+  }
+}
