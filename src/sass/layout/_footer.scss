@@ -1,0 +1,84 @@
+.footer {
+  width: 100%;
+  background: #f7f7f7;
+
+  &__container {
+    font-weight: 400;
+    color: #545454;
+  }
+}
+
+.developed {
+  margin-right: 10px;
+}
+
+.students {
+  position: relative;
+  margin-left: 10px;
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 83%;
+  height: 0.5px;
+  background-color: #545454;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    height: 100px;
+
+    &__container {
+      font-size: 14px;
+      line-height: 1.14;
+    }
+
+    &__copyright {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 29px;
+      margin-bottom: 10px;
+    }
+
+    &__developed {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 77px;
+
+    &__container {
+      font-size: 16px;
+      line-height: 1.19;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 30px;
+      padding-bottom: 28px;
+    }
+
+    &__copyright {
+      margin-right: 3px;
+    }
+
+    &__developed {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+// поменять цвета и точки перелома, когда будут переменные
