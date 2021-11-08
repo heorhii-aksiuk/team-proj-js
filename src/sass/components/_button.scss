@@ -6,7 +6,7 @@
   padding-right: 36.19px;
   min-width: 129.53px;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: 768px) {
     padding-left: 38px;
     padding-right: 38px;
     min-width: 136px;
@@ -18,7 +18,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  color: $white-text-color;
+  color: white;
   background: transparent;
   border: 1px solid white;
   border-radius: 5px;
