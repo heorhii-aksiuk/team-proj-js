@@ -1,3 +1,5 @@
+// поменять цвета и точки перелома, когда будут переменные
+
 .footer {
   width: 100%;
   background: #f7f7f7;
@@ -27,6 +29,22 @@
   height: 0.5px;
   background-color: #545454;
   border-radius: 2px;
+}
+
+.underline::after:hover,
+.underline::after:focus {
+  color: black;
+}
+
+.button {
+  border: 0px;
+  background-color: #54545400;
+  color: #545454;
+  cursor: pointer;
+}
+.button:focus,
+.button:hover {
+  color: black;
 }
 
 @media screen and (max-width: 767px) {
@@ -80,5 +98,3 @@
     }
   }
 }
-
-// поменять цвета и точки перелома, когда будут переменные
