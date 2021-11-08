@@ -1,0 +1,37 @@
+<!-- HEADER -->
+<header class="header header-home">
+    <!-- Если поменять header-home на header-library загрузится бекграунд для library -->
+  <div class="header-box container">
+    <nav class="nav">
+      <a class="logo link" href="#">
+        <svg class="logo__img" width="24" height="24">
+          <use href="#"></use>
+        </svg>
+        <span class="logo__title">Filmoteka</span>
+      </a>
+      <ul class="menu list">
+        <li class="menu__item">
+            <button class="menu__button home-button" type="button">Home</button>
+        </li>
+        <li class="menu__item">
+            <button class="menu__button library-button" type="button">My Library</button>
+        </li>
+      </ul>
+    </nav>
+    <form class="search-form" id="search-form">
+      <input class="search-form__input" type="text" name="query" autocomplete="off" placeholder="Search films"
+      />
+      <button class="search-form__button" type="submit">
+        <svg class="button__img" width="12" height="12">
+          <use href="#"></use>
+        </svg>
+      </button>
+    </form>
+    <div class="library-menu hidden">
+      <button class="library-watched-btn button" type="button">Watched</button>
+      <button class="library-queue-btn button" type="button">Queue</button>
+    </div>
+  </div>
+</header>
+<!-- END-HEADER -->
+
