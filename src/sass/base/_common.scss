@@ -23,7 +23,7 @@ img {
 }
 
 .link {
-  color: #000000;
+  color: $black-color;
   text-decoration: none;
 }
 
@@ -33,8 +33,6 @@ img {
 
 body {
   font-family: 'Roboto', sans-serif;;
-  color: #000000;
-  background-color: #FFFFFF;
+  color: $black-color;
+  background-color: $white-color;
 }
-
-// изменить цвета на переменные когда они будут созданы 
