@@ -1,11 +1,11 @@
 import { API_KEY, BASE_URL } from './api-data';
 
 export async function fetchAllFilms() {
-  const URL = `${BASE_URL}/trending/all/day?api_key=${API_KEY}`;
+  const URL = `${BASE_URL}/trending/all/day?api_key=${API_KEY}&page=2`;
   const apifetch = await fetch(URL)
   const response = await apifetch.json()
   const { result }= response
-  return console.log(response.results[19]); 
+  return console.log(response); 
 }
 
 
