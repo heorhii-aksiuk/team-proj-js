@@ -1,6 +1,7 @@
 const refs = {
   bodyEl: document.querySelector('body'),
-  mainCardListEl: document.querySelector('.js-main-section__card-list'),
+  mainCardListEl: document.querySelector('.js-collection__list'),
+  searchForm: document.getElementById('search-form'),
 };
 
-export const { bodyEl, mainCardListEl } = refs;
+export const { bodyEl, mainCardListEl, searchForm } = refs;
