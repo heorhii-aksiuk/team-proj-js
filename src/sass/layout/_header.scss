@@ -36,7 +36,7 @@
       font-weight: 500;
       font-size: 30px;
       line-height: 1.17;
-      color: #ffffff;
+      color: $white-color;
     }
   }
   
@@ -61,7 +61,7 @@
       font-size: 12px;
       line-height: 1.16;
       text-transform: uppercase;
-      color: #ffffff;
+      color: $white-color;
     }
   }
 
@@ -74,7 +74,7 @@
 
       left: 0px;
       bottom: -1px;
-      background-color: #FF6B08;
+      background-color: $orange-color;
   }
   
   .search-form {
@@ -88,18 +88,18 @@
       padding: 0 1px 4px 1px;
       border: none;
       outline: none;
-      caret-color: #ffffff;
-      border-bottom: 0.5px solid #ffffff;
+      caret-color: $white-color;
+      border-bottom: 0.5px solid $white-color;
       background-color: inherit;
   
-      color: #ffffff;
+      color: $white-color;
       font-weight: 400;
       font-size: 14px;
       line-height: 1.14;
     }
   
     &__input::placeholder {
-      color: #ffffff;
+      color: $white-color;
     }
   
     &__button {
@@ -138,9 +138,9 @@
     text-align: center;
     text-transform: uppercase;
   
-    color: #ffffff;
+    color: $white-color;
     background-color: inherit;
-    border: 1px solid #ffffff;
+    border: 1px solid $white-color;
   }
   
   .library-menu button:not(:last-child) {
@@ -149,7 +149,7 @@
   
   // TABLET STYLES
   
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-min-size) {
     .header {
       padding-top: 41px;
     }
@@ -177,7 +177,7 @@
   
   // DESKTOP STYLES
   
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $desktop-min-size) {
     .header-home {
       background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
         url(../images/header-img/header-home-desktop-img.jpg);
