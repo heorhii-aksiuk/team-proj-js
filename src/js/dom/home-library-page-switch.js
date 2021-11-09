@@ -8,6 +8,8 @@ function showHomePage() {
   headerEl.classList.remove('header-library');
   searchFormEl.classList.remove('hidden');
   libraryMenuEl.classList.add('hidden');
+  homeBtnEl.parentNode.classList.add('active-page');
+  libraryBtnEl.parentNode.classList.remove('active-page');
 }
 
 function showLibraryPage() {
@@ -15,4 +17,6 @@ function showLibraryPage() {
   headerEl.classList.remove('header-home');
   searchFormEl.classList.add('hidden');
   libraryMenuEl.classList.remove('hidden');
+  libraryBtnEl.parentNode.classList.add('active-page');
+  homeBtnEl.parentNode.classList.remove('active-page');
 }
