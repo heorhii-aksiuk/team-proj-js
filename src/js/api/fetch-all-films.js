@@ -1,20 +1,10 @@
 import { API_KEY, BASE_URL } from './api-data';
 
-export async function fetchAllFilms() {
-  const URL = `${BASE_URL}/trending/all/day?api_key=${API_KEY}&page=2`;
+export async function fetchAllFilms(pageNumber) {
+  const URL = `${BASE_URL}/trending/all/day?api_key=${API_KEY}&page=${pageNumber}`;
+
   const apifetch = await fetch(URL)
   const response = await apifetch.json()
-  const { result }= response
-  return console.log(response); 
+  const { results } = response;
+  return await results;
 }
-
-
-//const apifetch = await fetch(`${BASE_URL}/?${searchParams}`);
-    //const response = await apifetch.json();
-  //  const { hits } = response;
-   // this._total = response.total;
-
-
-
-
-// https://api.themoviedb.org/3/trending/all/day?api_key=<<api_key>>
