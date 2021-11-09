@@ -1,0 +1,211 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $black-color;
+  // opacity: 0.25;
+  z-index: 999;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-window {
+  width: 280px;
+  background-color: $white-color;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 20px 0;
+
+  @media screen and (min-width: 768px) {
+    width: 618px;
+    height: 562px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 882px;
+    height: 568px;
+  }
+
+  .modal-window-container {
+    padding: 48px 20px 41px 20px;
+    overflow-x: auto;
+    max-height: 100vh;
+
+    @media screen and (min-width: 768px) {
+      padding: 42px 30px 40px 28px;
+      overflow-x: hidden;
+      display: flex;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding: 50px 30px 40.2px 30px;
+    }
+
+    .modal-window-container-poster {
+      width: 240px;
+      height: 356.57px;
+      border-radius: 5px;
+      background-color: aqua;
+      margin-bottom: 30px;
+
+      @media screen and (min-width: 768px) {
+        width: 264px;
+        height: 373.55px;
+        margin-bottom: 0;
+        margin-right: 32px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 396px;
+        height: 477.8px;
+      }
+    }
+
+    .modal-window-container-info {
+      width: 240px;
+
+      @media screen and (min-width: 768px) {
+        width: 264px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 396px;
+      }
+
+      .film-name-heading {
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.15;
+        text-transform: uppercase;
+
+        @media screen and (min-width: 1024px) {
+          font-size: 30px;
+          line-height: 1.16;
+        }
+      }
+
+      .film-info-list {
+        margin-bottom: 20px;
+
+        .film-info-list-item {
+          margin-bottom: 10px;
+
+          .td-margin {
+            margin-right: 10px;
+          }
+
+          .film-info-text-left {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 1.33;
+            color: #8c8c8c;
+          }
+
+          .film-info-text-right {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 1.33;
+          }
+
+          .film-info-text-right-title {
+            text-transform: uppercase;
+          }
+
+          .film-info-text-right-numbers {
+            line-height: 1.16;
+
+            .film-rating-left {
+              width: 36px;
+              height: 16px;
+              border-radius: 5px;
+              font-size: 12px;
+              line-height: 1.16;
+              background-color: &orange-color;
+              color: $white-color;
+              display: inline-block;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    .modal-window-container-about {
+      width: 240px;
+
+      @media screen and (min-width: 768px) {
+        width: 264px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 396px;
+      }
+
+      .about-heading {
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.33;
+        text-transform: uppercase;
+      }
+
+      .about-text {
+        margin-bottom: 21px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.67;
+
+        @media screen and (min-width: 768px) {
+          margin-bottom: 20px;
+        }
+
+        @media screen and (min-width: 1024px) {
+          margin-bottom: 21px;
+        }
+      }
+    }
+
+    .modal-window-container-forms {
+      display: flex;
+
+      .modal-btn {
+        width: 112.58px;
+        height: 44px;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+          width: 125.03px;
+        }
+
+        @media screen and (min-width: 1024px) {
+          width: 136px;
+        }
+      }
+
+      .modal-btn:not(:last-child) {
+        margin-right: 10px;
+
+        @media screen and (min-width: 768px) {
+          margin-right: 14.94px;
+        }
+
+        @media screen and (min-width: 1024px) {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+.modal-window-container::-webkit-scrollbar {
+  width: 0;
+}
