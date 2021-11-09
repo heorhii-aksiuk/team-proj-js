@@ -28,9 +28,7 @@
     align-items: baseline;
   
     &__img {
-        background-color: cadetblue;
       display: block;
-      border-radius: 5px;
     }
   
     &__title {
@@ -38,13 +36,16 @@
       font-weight: 500;
       font-size: 30px;
       line-height: 1.17;
-      color: #ffffff;
+      color: $white-color;
     }
   }
   
   .menu {
     display: flex;
-  
+
+    &__item { 
+      position: relative;
+    }
     &__item:not(:last-child) {
       margin-right: 39px;
     }
@@ -60,8 +61,20 @@
       font-size: 12px;
       line-height: 1.16;
       text-transform: uppercase;
-      color: #ffffff;
+      color: $white-color;
     }
+  }
+
+  .menu__item.active-page::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 3px;
+
+      left: 0px;
+      bottom: -1px;
+      background-color: $orange-color;
   }
   
   .search-form {
@@ -75,18 +88,18 @@
       padding: 0 1px 4px 1px;
       border: none;
       outline: none;
-      caret-color: #ffffff;
-      border-bottom: 0.5px solid #ffffff;
+      caret-color: $white-color;
+      border-bottom: 0.5px solid $white-color;
       background-color: inherit;
   
-      color: #ffffff;
+      color: $white-color;
       font-weight: 400;
       font-size: 14px;
       line-height: 1.14;
     }
   
     &__input::placeholder {
-      color: #ffffff;
+      color: $white-color;
     }
   
     &__button {
@@ -108,15 +121,13 @@
   }
   
   .search-form__button .button__img {
-      background-color: cadetblue;
     position: absolute;
     bottom: 0;
     left: 0;
   }
   
   .library-menu {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-top: 49px;
   }
   
@@ -127,22 +138,18 @@
     text-align: center;
     text-transform: uppercase;
   
-    color: #ffffff;
+    color: $white-color;
     background-color: inherit;
-    border: 1px solid #ffffff;
+    border: 1px solid $white-color;
   }
   
   .library-menu button:not(:last-child) {
     margin-right: 15px;
   }
   
-  .hidden {
-    display: none;
-  }
-  
   // TABLET STYLES
   
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-min-size) {
     .header {
       padding-top: 41px;
     }
@@ -170,7 +177,7 @@
   
   // DESKTOP STYLES
   
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $desktop-min-size) {
     .header-home {
       background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
         url(../images/header-img/header-home-desktop-img.jpg);
