@@ -43,7 +43,6 @@
       padding: 42px 30px 40px 28px;
       overflow-x: hidden;
       display: flex;
-      // max-height: 560px;
     }
 
     @media screen and (min-width: 1024px) {
@@ -70,125 +69,143 @@
       }
     }
 
-    .right-side {
+    .modal-window-container-info {
+      width: 240px;
+
       @media screen and (min-width: 768px) {
-        // display: flex;
-        // flex-direction: column;
+        width: 264px;
       }
 
-      .modal-window-container-info {
-        width: 240px;
+      @media screen and (min-width: 1024px) {
+        width: 396px;
+      }
 
-        @media screen and (min-width: 768px) {
-          width: 264px;
-        }
+      .film-name-heading {
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        text-transform: uppercase;
 
         @media screen and (min-width: 1024px) {
-          width: 396px;
-        }
-
-        .film-name-heading {
-          margin-bottom: 20px;
-          font-weight: 500;
-          font-size: 20px;
-          line-height: 23px;
-          text-transform: uppercase;
-
-          @media screen and (min-width: 1024px) {
-            font-size: 30px;
-            line-height: 35px;
-          }
-        }
-
-        .film-info-list {
-          margin-bottom: 20px;
-          padding-inline-start: 0;
-
-          .film-info-list-item {
-            // display: flex;
-            // justify-content: space-between;
-            margin-bottom: 10px;
-
-            .film-info-text-left {
-              font-weight: 500;
-              font-size: 12px;
-              line-height: 1.33;
-              color: #8c8c8c;
-            }
-
-            .film-info-text-right {
-              font-weight: 500;
-              font-size: 12px;
-              line-height: 1.33;
-            }
-
-            .film-info-text-right-title {
-              text-transform: uppercase;
-            }
-
-            .film-info-text-right-numbers {
-              line-height: 14px;
-
-              .film-rating-left {
-                width: 36px;
-                height: 16px;
-                border-radius: 5px;
-                background-color: #ff6b01;
-                color: #ffffff;
-                display: inline-block;
-                text-align: center;
-              }
-            }
-          }
+          font-size: 30px;
+          line-height: 35px;
         }
       }
 
-      .modal-window-container-about {
-        width: 240px;
+      .film-info-list {
+        margin-bottom: 20px;
+        padding-inline-start: 0;
 
-        @media screen and (min-width: 768px) {
-          width: 264px;
-        }
-
-        @media screen and (min-width: 1024px) {
-          width: 396px;
-        }
-
-        .about-heading {
+        .film-info-list-item {
           margin-bottom: 10px;
-          font-weight: 500;
-          font-size: 12px;
-          line-height: 1.33;
-          text-transform: uppercase;
-        }
 
-        .about-text {
-          margin-bottom: 21px;
-          font-weight: 500;
-          font-size: 12px;
-          line-height: 1.67;
-
-          @media screen and (min-width: 768px) {
-            margin-bottom: 20px;
+          .film-info-text-left {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 1.33;
+            color: #8c8c8c;
           }
 
-          @media screen and (min-width: 1024px) {
-            margin-bottom: 21px;
+          .film-info-text-right {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 1.33;
+          }
+
+          .film-info-text-right-title {
+            text-transform: uppercase;
+          }
+
+          .film-info-text-right-numbers {
+            line-height: 14px;
+
+            .film-rating-left {
+              width: 36px;
+              height: 16px;
+              border-radius: 5px;
+              background-color: #ff6b01;
+              color: #ffffff;
+              display: inline-block;
+              text-align: center;
+            }
           }
         }
       }
+    }
 
-      .modal-window-container-forms {
-        width: 240px;
-        height: 44px;
-        background-color: aqua;
+    .modal-window-container-about {
+      width: 240px;
+
+      @media screen and (min-width: 768px) {
+        width: 264px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 396px;
+      }
+
+      .about-heading {
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.33;
+        text-transform: uppercase;
+      }
+
+      .about-text {
+        margin-bottom: 21px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.67;
 
         @media screen and (min-width: 768px) {
-          width: 264px;
+          margin-bottom: 20px;
         }
 
         @media screen and (min-width: 1024px) {
-          width: 396px;
+          margin-bottom: 21px;
+        }
+      }
+    }
+
+    .modal-window-container-forms {
+      // width: 240px;
+      // height: 44px;
+      // background-color: aqua;
+      display: flex;
+
+      @media screen and (min-width: 768px) {
+        width: 264px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 396px;
+      }
+
+      .modal-btn {
+        width: 112.58px;
+        height: 44px;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+          width: 125.03px;
+        }
+
+        @media screen and (min-width: 1024px) {
+          width: 136px;
+        }
+      }
+
+      .modal-btn:not(:last-child) {
+        margin-right: 10px;
+
+        @media screen and (min-width: 768px) {
+          margin-right: 14.94px;
+        }
+
+        @media screen and (min-width: 1024px) {
+          margin-right: 15px;
         }
       }
     }
