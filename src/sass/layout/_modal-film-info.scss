@@ -4,7 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #000000;
+  background-color: $black-color;
   // opacity: 0.25;
   z-index: 999;
 }
@@ -17,7 +17,7 @@
 
 .modal-window {
   width: 280px;
-  background-color: #ffffff;
+  background-color: $white-color;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -84,21 +84,24 @@
         margin-bottom: 20px;
         font-weight: 500;
         font-size: 20px;
-        line-height: 23px;
+        line-height: 1.15;
         text-transform: uppercase;
 
         @media screen and (min-width: 1024px) {
           font-size: 30px;
-          line-height: 35px;
+          line-height: 1.16;
         }
       }
 
       .film-info-list {
         margin-bottom: 20px;
-        padding-inline-start: 0;
 
         .film-info-list-item {
           margin-bottom: 10px;
+
+          .td-margin {
+            margin-right: 10px;
+          }
 
           .film-info-text-left {
             font-weight: 500;
@@ -118,14 +121,16 @@
           }
 
           .film-info-text-right-numbers {
-            line-height: 14px;
+            line-height: 1.16;
 
             .film-rating-left {
               width: 36px;
               height: 16px;
               border-radius: 5px;
-              background-color: #ff6b01;
-              color: #ffffff;
+              font-size: 12px;
+              line-height: 1.16;
+              background-color: &orange-color;
+              color: $white-color;
               display: inline-block;
               text-align: center;
             }
@@ -170,18 +175,7 @@
     }
 
     .modal-window-container-forms {
-      // width: 240px;
-      // height: 44px;
-      // background-color: aqua;
       display: flex;
-
-      @media screen and (min-width: 768px) {
-        width: 264px;
-      }
-
-      @media screen and (min-width: 1024px) {
-        width: 396px;
-      }
 
       .modal-btn {
         width: 112.58px;
