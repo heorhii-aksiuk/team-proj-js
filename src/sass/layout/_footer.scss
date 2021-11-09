@@ -1,12 +1,23 @@
-// поменять цвета и точки перелома, когда будут переменные
-
 .footer {
   width: 100%;
   background: #f7f7f7;
 
   &__container {
     font-weight: 400;
-    color: #545454;
+    color: $grey-color;
+  }
+
+  &__button {
+    border: 0px;
+    background-color: #54545400;
+    color: $grey-color;
+    cursor: pointer;
+  }
+
+  &__button:focus,
+  &__button:hover {
+    color: $black-color;
+    transition: color $cubic-bezier;
   }
 }
 
@@ -27,27 +38,17 @@
   display: block;
   width: 83%;
   height: 0.5px;
-  background-color: #545454;
+  background-color: $grey-color;
   border-radius: 2px;
+
+  &:hover,
+  &:focus {
+    color: $black-color;
+    transition: color $cubic-bezier;
+  }
 }
 
-.underline::after:hover,
-.underline::after:focus {
-  color: black;
-}
-
-.button {
-  border: 0px;
-  background-color: #54545400;
-  color: #545454;
-  cursor: pointer;
-}
-.button:focus,
-.button:hover {
-  color: black;
-}
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: $phone-max-size) {
   .footer {
     height: 100px;
 
@@ -70,10 +71,20 @@
       justify-content: center;
       padding-bottom: 30px;
     }
+
+    &__heart-icon {
+      width: 14px;
+      height: 12.75px;
+    }
+  }
+
+  .heart-icon {
+    width: 14px;
+    height: 12.75px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $tablet-min-size) {
   .footer {
     height: 77px;
 
@@ -96,5 +107,15 @@
       align-items: center;
       justify-content: center;
     }
+
+    &__heart-icon {
+      width: 14px;
+      height: 12.88px;
+    }
+  }
+
+  .heart-icon {
+    width: 14px;
+    height: 12.88px;
   }
 }
