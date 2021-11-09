@@ -1,10 +1,10 @@
 {{#each this}}
-<li class="collection__item">
+<li class="collection__item main-section__card-item">
   <article class="card">
     <a href="" class="card__link"">
           {{#if poster_path}}
           <img class="card__img" src="https://www.themoviedb.org/t/p/w500{{poster_path}}"
-      onerror="this.onerror=null;this.src='https://restorixhealth.com/wp-content/uploads/2018/08/No-Image.png'" loading="lazy"
+      onerror="this.onerror=null;this.src='https://restorixhealth.com/wp-content/uploads/2018/08/No-Image.png' loading="lazy"
       alt="{{title}}" title="{{title}}" data-id="{{id}}" />
     {{else}}
     <img class="card__img" src="https://www.nopcommerce.com/images/thumbs/0005720_coming-soon-page.jpeg" loading="lazy" alt="{{title}}"
