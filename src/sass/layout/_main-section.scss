@@ -1,21 +1,25 @@
-.main-section {
-  &__card-list {
+.collection {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  &__list {
     margin-top: -20px;
   }
-  &__card-item {
+  &__item {
     margin-top: 20px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .main-section {
-    &__card-list {
+  .collection {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    &__list {
       display: flex;
       flex-wrap: wrap;
       margin-top: -30px;
       margin-left: -30px;
     }
-    &__card-item {
+    &__item {
       margin-top: 30px;
       margin-left: 30px;
       flex-basis: calc((100% - 60px) / 2);
@@ -23,19 +27,11 @@
   }
 }
 @media screen and (min-width: 1024px) {
-  .main-section {
-    &__card-item {
+  .collection {
+    &__item {
       flex-basis: calc((100% - 90px) / 3);
     }
   }
-}
-
-//Создан для примера
-.box {
-  margin: 0 auto;
-  background-color: red;
-  width: 274px;
-  height: 439px;
 }
 
 // Pagination
