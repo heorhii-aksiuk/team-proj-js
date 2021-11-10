@@ -93,40 +93,14 @@
         }
       }
 
-      // .description-list,
-      // .value-list {
-      //   display: flex;
-      //   flex-direction: column;
-
-      //   padding: 0;
-      //   margin: 0;
-
-      //   list-style: none;
-      // }
-
-      // .description-item:not(:last-child),
-      // .value-item:not(:last-child) {
-      //   margin-bottom: 10px;
-      // }
-
-      // .description-list {
-      //   @media screen and (min-width: 1024px) {
-      //     margin-right: 82px;
-      //   }
-
-      //   @media screen and (max-width: 1023px) {
-      //     margin-right: 39px;
-      //   }
-      // }
-
       .film-info-list {
         margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
 
         .film-info-list-item {
-          margin-bottom: 10px;
-
-          .td-margin {
-            margin-right: 10px;
+          .film-info-list-item-left {
+            margin-right: 20px;
           }
 
           .film-info-text-left {
@@ -134,12 +108,15 @@
             font-size: 12px;
             line-height: 1.33;
             color: #8c8c8c;
+            margin-bottom: 10px;
           }
 
           .film-info-text-right {
             font-weight: 500;
             font-size: 12px;
             line-height: 1.33;
+            margin-bottom: 10px;
+            display: flex;
           }
 
           .film-info-text-right-title {
@@ -155,7 +132,7 @@
               border-radius: 5px;
               font-size: 12px;
               line-height: 1.16;
-              background-color: &orange-color;
+              background-color: $orange-color;
               color: $white-color;
               display: inline-block;
               text-align: center;
