@@ -34,6 +34,23 @@
     height: 568px;
   }
 
+  .modal-close-button {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+
+    .modal-close-button-icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
   .modal-window-container {
     padding: 48px 20px 41px 20px;
     overflow-x: auto;
