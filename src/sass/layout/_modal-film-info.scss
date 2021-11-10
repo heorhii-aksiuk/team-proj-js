@@ -132,6 +132,15 @@
 
           .film-info-text-right-numbers {
             line-height: 1.16;
+            text-align: center;
+
+            .film-rating-right {
+              // width: 36px;
+              // height: 16px;
+              // text-align: center;
+              // padding: 2px 0;
+              display: block;
+            }
 
             .film-rating-left {
               width: 36px;
@@ -142,7 +151,7 @@
               background-color: $orange-color;
               color: $white-color;
               display: block;
-              text-align: center;
+              // text-align: center;
               padding: 2px 0;
             }
           }
@@ -206,6 +215,10 @@
         @media screen and (min-width: 1024px) {
           width: 136px;
         }
+      }
+
+      .modal-btn-watched {
+        padding: 1px 8.28px;
       }
 
       .modal-btn:not(:last-child) {
