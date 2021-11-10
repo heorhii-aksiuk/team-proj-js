@@ -1,4 +1,14 @@
 {{#each this}}
+<div class="modal-window-container-poster">
+    <img class="card__img" src="https://www.themoviedb.org/t/p/w500{{poster_path}}">
+    onerror="this.onerror=null;this.src='https://restorixhealth.com/wp-content/uploads/2018/08/No-Image.png' loading="lazy"
+      alt="{{title}}" title="{{title}}" data-id="{{id}}" />
+    {{else}}
+    <img class="card__img" src="https://www.nopcommerce.com/images/thumbs/0005720_coming-soon-page.jpeg" loading="lazy" alt="{{title}}"
+      title="{{title}}" data-id="{{id}}" />
+    {{/if}}
+</div>
+
 <div class="modal-window-container-info">
     <h2 class="film-name-heading">{{title}}</h2>
 
@@ -24,7 +34,7 @@
 <div class="modal-window-container-about">
     <h3 class="about-heading">About</h3>
     <p class="about-text">
-        {{overview}}
+        {{text}}
     </p>
 </div>
 {{/each}}
