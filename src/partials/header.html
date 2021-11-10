@@ -3,15 +3,15 @@
     <!-- Если поменять header-home на header-library загрузится бекграунд для library -->
   <div class="header-box container">
     <nav class="nav">
-      <a class="logo link" href="#">
+      <a class="logo link" href="">
         <svg class="logo__img" width="24" height="24">
-          <use href="#"></use>
+          <use href=""></use>
         </svg>
         <span class="logo__title">Filmoteka</span>
       </a>
       <ul class="menu list">
-        <li class="menu__item">
-            <button class="menu__button home-button" type="button">Home</button>
+        <li class="menu__item"><a class="homebtn" href="">
+            <button class="menu__button home-button" type="button" onClick="refreshPage()">Home</button></a>
         </li>
         <li class="menu__item">
             <button class="menu__button library-button" type="button">My Library</button>
