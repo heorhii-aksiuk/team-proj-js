@@ -1,3 +1,30 @@
 {{#each this}}
+<div class="modal-window-container-info">
+    <h2 class="film-name-heading">{{title}}</h2>
 
+    <div class="film-info-list">
+        <ul class="list film-info-list-item film-info-list-item-left">
+            <li class="film-info-text-left">Vote / Votes</li>
+            <li class="film-info-text-left">Popularity</li>
+            <li class="film-info-text-left">Original Title</li>
+            <li class="film-info-text-left">Genre</li>
+        </ul>
+
+        <ul class="list film-info-list-item film-info-list-item-right">
+            <li class="film-info-text-right film-info-text-right-numbers">
+                <span class="film-rating-left">{{vote_average}}</span> <span class="film-rating-right"> / {{vote_count}}</span>
+            </li>
+            <li class="film-info-text-right film-info-text-right-numbers">{{popularity}}</li>
+            <li class="film-info-text-right film-info-text-right-title">{{original_title}}</li>
+            <li class="film-info-text-right">Western</li>
+        </ul>
+    </div>
+
+</div>
+<div class="modal-window-container-about">
+    <h3 class="about-heading">About</h3>
+    <p class="about-text">
+        {{overview}}
+    </p>
+</div>
 {{/each}}

@@ -135,10 +135,7 @@
             text-align: center;
 
             .film-rating-right {
-              // width: 36px;
-              // height: 16px;
-              // text-align: center;
-              // padding: 2px 0;
+              padding: 2px 0;
               display: block;
             }
 
@@ -151,7 +148,6 @@
               background-color: $orange-color;
               color: $white-color;
               display: block;
-              // text-align: center;
               padding: 2px 0;
             }
           }
