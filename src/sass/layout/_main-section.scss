@@ -1,8 +1,13 @@
 .main-section {
   &__card-list {
+  //     display: none;
+  // // убрать по окончанию работы!!!!!!
     margin-top: -20px;
+    padding-bottom: 40px;
   }
   &__card-item {
+  //         display: none;
+  // // убрать по окончанию работы!!!!!!
     margin-top: 20px;
   }
 }
@@ -37,3 +42,50 @@
   width: 274px;
   height: 439px;
 }
+
+
+// Pagination
+
+.pagination {
+  margin: 0 auto;
+  width: 280px;
+  padding-bottom: 40px;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__dots {
+    display: none;
+  }
+
+  &__btn {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.33;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+
+  &__btn-actve {
+    background-color: $orange-color;
+    color: $white-color;
+  }
+
+  &__btn-arrows {
+     background-color: #F7F7F7;
+     cursor: pointer;
+  }
+
+  &__mobile-hidden {
+    display: none;
+  }
+
+}
+
