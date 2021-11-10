@@ -36,14 +36,14 @@
 
   .modal-close-button {
     position: absolute;
-    top: 18px;
-    right: 18px;
+    top: 10px;
+    right: 10px;
     width: 30px;
     height: 30px;
     background-color: transparent;
     border: 0;
     cursor: pointer;
-    padding: 0;
+    padding: 8px;
 
     .modal-close-button-icon {
       width: 14px;
