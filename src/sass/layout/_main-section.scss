@@ -1,12 +1,8 @@
 .main-section {
   &__card-list {
-      display: none;
-  // убрать по окончанию работы!!!!!!
     margin-top: -20px;
   }
   &__card-item {
-          display: none;
-  // убрать по окончанию работы!!!!!!
     margin-top: 20px;
   }
 }
@@ -42,7 +38,6 @@
   height: 439px;
 }
 
-
 // Pagination
 
 .pagination {
@@ -57,17 +52,12 @@
     justify-content: space-between;
   }
 
-  &__item {
-    width: 40px;
-    height: 40px;
-  }
-
   &__btn {
     font-size: 12px;
     font-weight: 500;
     line-height: 1.33;
-    min-width: 40px;
-    min-height: 40px;
+    width: 40px;
+    height: 40px;
     padding: 0;
     border: none;
     border-radius: 5px;
@@ -84,8 +74,8 @@
   }
 
   &__btn-arrows {
-     background-color: #F7F7F7;
-     cursor: pointer;
+    background-color: #f7f7f7;
+    cursor: pointer;
   }
 
   &__mobile-hidden {
@@ -93,7 +83,27 @@
   }
 }
 
-@media screen and (min-width: $tablet-min-size) {
-  
+@media screen and (min-width: 768px) {
+  .pagination {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    width: 374px;
+
+    &__btn {
+      width: 31.75px;
+    }
+
+    &__btn-arrows, &__btn-actve {
+    width: 40px;
+    }
+
+    &__mobile-hidden {
+    display: block;
+  }
+  }
 }
 
+.content-hidden {
+  pointer-events: none;
+  opacity: 0;
+}
