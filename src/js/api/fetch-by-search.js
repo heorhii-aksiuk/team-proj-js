@@ -6,11 +6,8 @@ export default async function getFetchBySearch(query) {
 
   try {
     const apiFetch = await fetch(url);
-    console.log(apiFetch);
     const response = await apiFetch.json();
-    console.log(response);
     const results = await response.results;
-    console.log(results);
     return results;
   } catch (error) {
     return console.log(error);
