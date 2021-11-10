@@ -1,13 +1,12 @@
 .main-section {
   &__card-list {
-  //     display: none;
-  // // убрать по окончанию работы!!!!!!
+      display: none;
+  // убрать по окончанию работы!!!!!!
     margin-top: -20px;
-    padding-bottom: 40px;
   }
   &__card-item {
-  //         display: none;
-  // // убрать по окончанию работы!!!!!!
+          display: none;
+  // убрать по окончанию работы!!!!!!
     margin-top: 20px;
   }
 }
@@ -49,6 +48,7 @@
 .pagination {
   margin: 0 auto;
   width: 280px;
+  padding-top: 40px;
   padding-bottom: 40px;
 
   &__list {
@@ -57,8 +57,9 @@
     justify-content: space-between;
   }
 
-  &__dots {
-    display: none;
+  &__item {
+    width: 40px;
+    height: 40px;
   }
 
   &__btn {
@@ -71,6 +72,10 @@
     border: none;
     border-radius: 5px;
     background-color: transparent;
+  }
+
+  &__svg {
+    display: inline-block;
   }
 
   &__btn-actve {
@@ -86,6 +91,9 @@
   &__mobile-hidden {
     display: none;
   }
+}
 
+@media screen and (min-width: $tablet-min-size) {
+  
 }
 
