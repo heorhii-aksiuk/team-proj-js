@@ -30,6 +30,8 @@ export function createMarkup(data) {
 showAllFilms(homePage);
 
 nextPageBtnEl.addEventListener('click', nextPage)
+previousPageBtnEl.addEventListener('click', previousPage);
+
 
 function nextPage() {
   currentPage += 1;
@@ -38,5 +40,26 @@ function nextPage() {
   currentBtnEl.textContent = currentPage;
   minusOneBtnEl.textContent = currentPage - 1;
   if (currentPage > 2) minusTwoBtnEl.textContent = currentPage - 2;
+  showAllFilms(currentPage);
+}
+
+function previousPage() {
+  currentPage -= 1;
+  plusTwoBtnEl.textContent = currentPage + 2;
+  plusOneBtnEl.textContent = currentPage + 1;
+  currentBtnEl.textContent = currentPage;
+  
+  if (currentPage < 2) {
+    minusOneBtnEl.textContent = '';
+  } else {
+    minusOneBtnEl.textContent = currentPage - 1;
+  }
+  
+  if (currentPage < 3) {
+    minusTwoBtnEl.textContent = '';
+  } else {
+    minusTwoBtnEl.textContent = currentPage - 2;
+  }
+
   showAllFilms(currentPage);
 }
