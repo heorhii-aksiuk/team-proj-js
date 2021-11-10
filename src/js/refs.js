@@ -7,6 +7,15 @@ const refs = {
   libraryBtnEl: document.querySelector('.library-button'),
   searchFormEl: document.querySelector('.search-form'),
   libraryMenuEl: document.querySelector('.library-menu'),
+  previousPageBtnEl: document.getElementById('previous-page-btn'),
+  firstPageBtnEl: document.getElementById('first-page-btn'),
+  minusTwoBtnEl: document.getElementById('minus-2-btn'),
+  minusOneBtnEl: document.getElementById('minus-1-btn'),
+  currentBtnEl: document.getElementById('current-page-btn'),
+  plusOneBtnEl: document.getElementById('plus-1-btn'),
+  plusTwoBtnEl: document.getElementById('plus-2-btn'),
+  lastPageBtnEl: document.getElementById('last-page-btn'),
+  nextPageBtnEl: document.getElementById('next-page-btn'),
 };
 
 export const {
@@ -18,5 +27,14 @@ export const {
   searchForm,
   searchFormEl,
   libraryMenuEl,
+  previousPageBtnEl,
+  firstPageBtnEl,
+  minusTwoBtnEl,
+  minusOneBtnEl,
+  currentBtnEl,
+  plusOneBtnEl,
+  plusTwoBtnEl,
+  lastPageBtnEl,
+  nextPageBtnEl,
 } = refs;
 

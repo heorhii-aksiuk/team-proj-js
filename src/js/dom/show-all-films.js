@@ -1,5 +1,16 @@
 import { fetchAllFilms } from '../api/fetch-all-films';
-import { mainCardListEl } from '../refs';
+import {
+  mainCardListEl,
+  previousPageBtnEl,
+  firstPageBtnEl,
+  minusTwoBtnEl,
+  minusOneBtnEl,
+  currentBtnEl,
+  plusOneBtnEl,
+  plusTwoBtnEl,
+  lastPageBtnEl,
+  nextPageBtnEl,
+} from '../refs';
 import filmCard from '../../templates/film-card.hbs';
 
 const homePage = 1;
