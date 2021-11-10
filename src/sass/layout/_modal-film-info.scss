@@ -191,7 +191,13 @@
       .modal-btn {
         width: 112.58px;
         height: 44px;
-        text-align: center;
+        min-width: 112.58px;
+        font-size: 12px;
+        line-height: 1.33;
+        // align-items: center;
+        // text-align: center;
+        padding: 14px 8.28px 12px 8.28px;
+        text-transform: uppercase;
 
         @media screen and (min-width: 768px) {
           width: 125.03px;
