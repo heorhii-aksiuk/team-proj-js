@@ -22,9 +22,3 @@ function refreshPage() {
   homebtn.addEventListener('click', refreshPage);
 }
 
-// const startPage = showAllFilms(homePage)
-// btnGoHome.addEventListener('click', startPage)
-
-// const startPage = showAllFilms(homePage)
-
-// logo.addEventListener('click', startPage)
