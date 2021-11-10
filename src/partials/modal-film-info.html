@@ -5,7 +5,26 @@
       <div class="right-side">
         <div class="modal-window-container-info">
           <h2 class="film-name-heading">A FISTFUL OF LEAD</h2>
-          <table class="film-info-list">
+
+          <div class="film-info-box">
+            <ul class="list film-info-list-item">
+              <li class="film-info-text-left">Vote / Votes</li>
+              <li class="film-info-text-left">Popularity</li>
+              <li class="film-info-text-left">Original Title</li>
+              <li class="film-info-text-left">Genre</li>
+            </ul>
+
+            <ul class="list film-info-list-item">
+              <li class="value-item">
+                <span class="film-rating-left">{{voteAverage}}</span class="film-rating-right"> / {{voteCount}}
+              </li>
+              <li class="film-info-text-right film-info-text-right-numbers">{{popularity}}</li>
+              <li class="film-info-text-right film-info-text-right-title">{{originalName}}</li>
+              <li class="film-info-text-right">{{genres}}</li>
+            </ul>
+          </div>
+
+          <!-- <table class="film-info-list">
             <tr class="list film-info-list-item">
               <td class="film-info-text-left td-margin">Vote / Votes</td>
               <td class="">
@@ -28,7 +47,7 @@
               <td class="film-info-text-left td-margin">Genre</td>
               <td class="film-info-text-right">Western</td>
             </tr>
-          </table>
+          </table> -->
         </div>
         <div class="modal-window-container-about">
           <h3 class="about-heading">About</h3>

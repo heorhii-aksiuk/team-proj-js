@@ -9,11 +9,11 @@
   z-index: 999;
 }
 
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+// .is-hidden {
+//   opacity: 0;
+//   visibility: hidden;
+//   pointer-events: none;
+// }
 
 .modal-window {
   width: 280px;
@@ -92,6 +92,32 @@
           line-height: 1.16;
         }
       }
+
+      // .description-list,
+      // .value-list {
+      //   display: flex;
+      //   flex-direction: column;
+
+      //   padding: 0;
+      //   margin: 0;
+
+      //   list-style: none;
+      // }
+
+      // .description-item:not(:last-child),
+      // .value-item:not(:last-child) {
+      //   margin-bottom: 10px;
+      // }
+
+      // .description-list {
+      //   @media screen and (min-width: 1024px) {
+      //     margin-right: 82px;
+      //   }
+
+      //   @media screen and (max-width: 1023px) {
+      //     margin-right: 39px;
+      //   }
+      // }
 
       .film-info-list {
         margin-bottom: 20px;
