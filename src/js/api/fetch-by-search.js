@@ -13,7 +13,6 @@ export default async function getFetchBySearch(query) {
     const apiFetch = await fetch(url);
     const response = await apiFetch.json();
     const { results } = response;
-    console.log(results);
     return {
       films: results,
       genres,
