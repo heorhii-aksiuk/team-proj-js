@@ -12,22 +12,29 @@
     {{/if}}
     </a>
     <div class="card__wrap">
-      <a href="">
-        <h2 class="card__title" data-id="{{id}}">{{title}}</h2>
-      </a>
+      {{#if original_title}}
+        <h2 class='card__title'>{{original_title}}</h2>
+      {{/if}}
+      {{#if name}} 
+        <h2 class="card__title" data-id="{{id}}">{{name}}</h2>
+      {{/if}}
       <div class="card__data">
-        <ul class="card__genres">
+        <ul class="card__genres list">
           {{#if genres}}
           {{#each genres}}
-          <li class="card__genre"><a href="" class="card__text">{{name}}{{#unless @last}},{{/unless}}</a></li>
+          <li class="card__genre card__text">{{name}}{{#unless @last}},{{/unless}}</li>
           {{/each}}
           {{else}}<li class="card__genre card__text">N/A</li>
           {{/if}}
+        
+          {{#if release_date}}
+          <p class="card__year card__text">| {{release_date}}</p>
+          {{else}}<p class="card__text">| N/A</p>
+          {{/if}}
+          {{#if vote_average}}
+          <p class="card__rating card__text">{{vote_average}}</p>
+          {{/if}}
         </ul>
-        {{#if year}}
-        <p class="card__year card__text">| {{year}}</p>
-        {{else}}<p class="card__text">| N/A</p>
-        {{/if}}
       </div>
     </div>
   </article>
