@@ -9,7 +9,13 @@ function showAllFilms(page) {
 }
 
 export function createMarkup(data) {
-  mainCardListEl.innerHTML = filmCard(data);
+  const {films, genres} = data;
+  const filmsWithGenre = films.map(film => ({
+    ...film,
+    genres: genres.filter(genre => film.genre_ids.includes(genre.id))
+  }));
+  mainCardListEl.innerHTML = filmCard(filmsWithGenre);
+  
 }
 
 showAllFilms(homePage);
