@@ -20,6 +20,10 @@ const homePage = 1;
 let totalPage = 1000;
 let currentPage = homePage;
 
+minusOneBtnEl.classList.add('content-hidden');
+minusTwoBtnEl.classList.add('content-hidden');
+firstPageBtnEl.classList.add('content-hidden');
+
 if (totalPage > 3) {
   nextDotsLiEl.classList.remove('content-hidden');
   lastPageBtnEl.textContent = totalPage;
@@ -38,17 +42,21 @@ function showOrHideDots() {
 
   if (toEndPageLeft < 3) {
     nextDotsLiEl.classList.add('content-hidden');
+    lastPageBtnEl.classList.add('content-hidden');
     lastPageBtnEl.textContent = '';
   } else {
     nextDotsLiEl.classList.remove('content-hidden');
+    lastPageBtnEl.classList.remove('content-hidden');
     lastPageBtnEl.textContent = totalPage;
   }
 
   if (toStartPageLeft < 3) {
     previousDotsLiEl.classList.add('content-hidden');
+    firstPageBtnEl.classList.add('content-hidden');
     firstPageBtnEl.textContent = '';
   } else {
     previousDotsLiEl.classList.remove('content-hidden');
+    firstPageBtnEl.classList.remove('content-hidden');
     firstPageBtnEl.textContent = '1';
   }
 }
@@ -90,36 +98,35 @@ function previousPage() {
 }
 
 function buttonsContentChange() {
-  if (currentPage > totalPage) {
-    currentBtnEl.textContent = currentPage;
-    minusOneBtnEl.textContent = currentPage - 1;
-    minusTwoBtnEl.textContent = currentPage - 2;
-  } else if (currentPage === totalPage) {
-    plusTwoBtnEl.textContent = '';
-    plusOneBtnEl.textContent = '';
-    currentBtnEl.textContent = currentPage;
-    minusOneBtnEl.textContent = currentPage - 1;
-    minusTwoBtnEl.textContent = currentPage - 2;
-    } else if (currentPage + 1 === totalPage) {
-    plusTwoBtnEl.textContent = '';
-    plusOneBtnEl.textContent = currentPage + 1;
-    currentBtnEl.textContent = currentPage;
-    minusOneBtnEl.textContent = currentPage - 1;
-    minusTwoBtnEl.textContent = currentPage - 2;
+  minusTwoBtnEl.textContent = currentPage - 2;
+  minusOneBtnEl.textContent = currentPage - 1;
+  currentBtnEl.textContent = currentPage;
+  plusOneBtnEl.textContent = currentPage + 1;
+  plusTwoBtnEl.textContent = currentPage + 2;
+
+  if (currentPage >= totalPage) {
+    plusTwoBtnEl.classList.add('content-hidden');
+    plusOneBtnEl.classList.add('content-hidden');
+
+  } else if (currentPage + 1 === totalPage) {
+    plusTwoBtnEl.classList.add('content-hidden');
+    plusOneBtnEl.classList.remove('content-hidden');
+
   } else {
-    plusTwoBtnEl.textContent = currentPage + 2;
-    plusOneBtnEl.textContent = currentPage + 1;
-    currentBtnEl.textContent = currentPage;
+    plusTwoBtnEl.classList.remove('content-hidden');
+    plusOneBtnEl.classList.remove('content-hidden');
 
     if (currentPage === 1) {
-      minusOneBtnEl.textContent = '';
-      minusTwoBtnEl.textContent = '';
+      minusOneBtnEl.classList.add('content-hidden');
+      minusTwoBtnEl.classList.add('content-hidden');
+
     } else if (currentPage === 2) {
-      minusOneBtnEl.textContent = currentPage - 1;
-      minusTwoBtnEl.textContent = '';
+      minusOneBtnEl.classList.remove('content-hidden');
+      minusTwoBtnEl.classList.add('content-hidden');
+      
     } else {
-      minusOneBtnEl.textContent = currentPage - 1;
-      minusTwoBtnEl.textContent = currentPage - 2;
+      minusOneBtnEl.classList.remove('content-hidden');
+      minusTwoBtnEl.classList.remove('content-hidden');
     }
   }
 
