@@ -1,21 +1,25 @@
-.main-section {
-  &__card-list {
+.collection {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  &__list {
     margin-top: -20px;
   }
-  &__card-item {
+  &__item {
     margin-top: 20px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .main-section {
-    &__card-list {
+  .collection {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    &__list {
       display: flex;
       flex-wrap: wrap;
       margin-top: -30px;
       margin-left: -30px;
     }
-    &__card-item {
+    &__item {
       margin-top: 30px;
       margin-left: 30px;
       flex-basis: calc((100% - 60px) / 2);
@@ -23,17 +27,79 @@
   }
 }
 @media screen and (min-width: 1024px) {
-  .main-section {
-    &__card-item {
+  .collection {
+    &__item {
       flex-basis: calc((100% - 90px) / 3);
     }
   }
 }
 
-//Создан для примера
-.box {
+// Pagination
+
+.pagination {
   margin: 0 auto;
-  background-color: red;
-  width: 274px;
-  height: 439px;
+  width: 280px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.33;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+
+  &__svg {
+    display: inline-block;
+  }
+
+  &__btn-actve {
+    background-color: $orange-color;
+    color: $white-color;
+  }
+
+  &__btn-arrows {
+    background-color: #f7f7f7;
+    cursor: pointer;
+  }
+
+  &__mobile-hidden {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pagination {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    width: 374px;
+
+    &__btn {
+      width: 31.75px;
+    }
+
+    &__btn-arrows, &__btn-actve {
+    width: 40px;
+    }
+
+    &__mobile-hidden {
+    display: block;
+  }
+  }
+}
+
+.content-hidden {
+  pointer-events: none;
+  opacity: 0;
 }
