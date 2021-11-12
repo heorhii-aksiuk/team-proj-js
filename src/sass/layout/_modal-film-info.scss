@@ -9,11 +9,11 @@
   z-index: 999;
 }
 
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+// .is-hidden {
+//   opacity: 0;
+//   visibility: hidden;
+//   pointer-events: none;
+// }
 
 .modal-window {
   width: 280px;
@@ -152,6 +152,12 @@
             text-align: center;
 
             .film-rating-right {
+              width: 36px;
+              height: 16px;
+              border-radius: 5px;
+              font-size: 12px;
+              line-height: 1.16;
+              background-color: #f7f7f7;
               padding: 2px 0;
               display: block;
             }
@@ -166,6 +172,11 @@
               color: $white-color;
               display: block;
               padding: 2px 0;
+            }
+
+            .slash-film-info {
+                color: #8c8c8c;
+                margin: 0 3px;
             }
           }
         }
