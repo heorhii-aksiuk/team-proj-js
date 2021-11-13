@@ -15,83 +15,39 @@ import {
 
 import { showAllFilms } from './show-all-films'
 
-let pages = 1000;
+/* Start setup */
+
+let totalPages = 4;
 const homePage = 1;
-let totalPage = 1;
+let lastPage = 1;
 let currentPage = homePage;
 
-function pagination(totalPageInFetch) {
-  totalPage = totalPageInFetch;
-  return totalPage;
+function pagination(totalPages) {
+  lastPage = totalPages;
+  return lastPage;
 }
 
-pagination(pages);
+/* Main */
 
-function startPaginationSetup() {
-  minusOneBtnEl.classList.add('content-hidden');
-  minusTwoBtnEl.classList.add('content-hidden');
-  firstPageBtnEl.classList.add('content-hidden');
-
-  if (totalPage > 3) {
-    nextDotsLiEl.classList.remove('content-hidden');
-    lastPageBtnEl.textContent = totalPage;
-  } else {
-    nextDotsLiEl.classList.add('content-hidden');
-    lastPageBtnEl.textContent = '';
-  }
-
-  plusTwoBtnEl.textContent = currentPage + 2;
-  plusOneBtnEl.textContent = currentPage + 1;
-
-  if (totalPage < 2) plusOneBtnEl.classList.add('content-hidden');
-  if (totalPage < 3) plusTwoBtnEl.classList.add('content-hidden');
-}
+pagination(totalPages);
 
 startPaginationSetup();
 
-function showOrHideDots() {
-  let toStartPageLeft = currentPage - 1;
-  let toEndPageLeft = totalPage - currentPage;
-
-  if (toEndPageLeft < 3) {
-    nextDotsLiEl.classList.add('content-hidden');
-    lastPageBtnEl.classList.add('content-hidden');
-    lastPageBtnEl.textContent = '';
-  } else {
-    nextDotsLiEl.classList.remove('content-hidden');
-    lastPageBtnEl.classList.remove('content-hidden');
-    lastPageBtnEl.textContent = totalPage;
-  }
-
-  if (toStartPageLeft < 3) {
-    previousDotsLiEl.classList.add('content-hidden');
-    firstPageBtnEl.classList.add('content-hidden');
-    firstPageBtnEl.textContent = '';
-  } else {
-    previousDotsLiEl.classList.remove('content-hidden');
-    firstPageBtnEl.classList.remove('content-hidden');
-    firstPageBtnEl.textContent = '1';
-  }
-
-  if (minusOneBtnEl.textContent < 1) minusOneBtnEl.classList.add('content-hidden');
-  if (minusTwoBtnEl.textContent < 1) minusTwoBtnEl.classList.add('content-hidden');
-  if (minusOneBtnEl.textContent > 0) minusOneBtnEl.classList.remove('content-hidden');
-  if (minusTwoBtnEl.textContent > 0) minusTwoBtnEl.classList.remove('content-hidden');
-}
-
-nextPageBtnEl.addEventListener('click', nextPage);
-previousPageBtnEl.addEventListener('click', previousPage);
 paginationListEl.addEventListener('click', changePage);
+previousPageBtnEl.addEventListener('click', previousPage);
+nextPageBtnEl.addEventListener('click', nextPage);
+
+/* Functions */
 
 function changePage(event) {
   if (+event.target.textContent > 0) currentPage = +event.target.textContent;
-  if (currentPage > totalPage) return;
+  if (currentPage > lastPage) return;
   buttonsShow();
   showAllFilms(currentPage);
 }
 
 function nextPage() {
-  if (currentPage === totalPage) return;
+  if (currentPage === lastPage) return;
   currentPage += 1;
   buttonsShow();
   showAllFilms(currentPage);
@@ -104,21 +60,65 @@ function previousPage() {
   showAllFilms(currentPage);
 }
 
+function startPaginationSetup() {
+  firstPageBtnEl.textContent = homePage;
+  lastPageBtnEl.textContent = lastPage;
+  changePageNumbers();
+  
+  firstPageBtnEl.classList.add('content-hidden');
+  minusOneBtnEl.classList.add('content-hidden');
+  minusTwoBtnEl.classList.add('content-hidden');
+  nextDotsLiEl.classList.add('content-hidden');
+  lastPageBtnEl.classList.add('content-hidden');
+  
+  if (lastPage <= 1) {
+    plusOneBtnEl.classList.add('content-hidden');
+  } else if (lastPage === 2) {
+    plusTwoBtnEl.classList.add('content-hidden');
+  } else if (lastPage === 3) {
+    nextDotsLiEl.classList.add('content-hidden');
+    lastPageBtnEl.classList.add('content-hidden');
+  } else {
+    nextDotsLiEl.classList.remove('content-hidden');
+    lastPageBtnEl.classList.remove('content-hidden');
+  }
+}
+
+function showFirstAndLastPages() {
+  let toLastPageLeft = lastPage - currentPage;
+  
+  if (toLastPageLeft < 3) {
+    nextDotsLiEl.classList.add('content-hidden');
+    lastPageBtnEl.classList.add('content-hidden');
+  } else {
+    nextDotsLiEl.classList.remove('content-hidden');
+    lastPageBtnEl.classList.remove('content-hidden');
+  }
+  
+  if (currentPage < 4) {
+    previousDotsLiEl.classList.add('content-hidden');
+    firstPageBtnEl.classList.add('content-hidden');
+  } else {
+    previousDotsLiEl.classList.remove('content-hidden');
+    firstPageBtnEl.classList.remove('content-hidden');
+  }
+}
+
 function buttonsShow() {
   changePageNumbers();
-
-  if (currentPage >= totalPage) {
+  showFirstAndLastPages();
+  hiddeMinusButtons();
+  
+  if (currentPage >= lastPage) {
     plusTwoBtnEl.classList.add('content-hidden');
     plusOneBtnEl.classList.add('content-hidden');
-    minusOneBtnEl.classList.remove('content-hidden');
-    minusTwoBtnEl.classList.remove('content-hidden');
-  } else if (currentPage + 1 === totalPage) {
+  } else if (currentPage === lastPage - 1) {
     plusTwoBtnEl.classList.add('content-hidden');
     plusOneBtnEl.classList.remove('content-hidden');
   } else {
     plusTwoBtnEl.classList.remove('content-hidden');
     plusOneBtnEl.classList.remove('content-hidden');
-
+    
     if (currentPage === 1) {
       minusOneBtnEl.classList.add('content-hidden');
       minusTwoBtnEl.classList.add('content-hidden');
@@ -130,7 +130,6 @@ function buttonsShow() {
       minusTwoBtnEl.classList.remove('content-hidden');
     }
   }
-  showOrHideDots();
 }
 
 function changePageNumbers() {
@@ -140,3 +139,11 @@ function changePageNumbers() {
   plusOneBtnEl.textContent = currentPage + 1;
   plusTwoBtnEl.textContent = currentPage + 2;
 }
+
+function hiddeMinusButtons() {
+  if (minusTwoBtnEl.textContent < 1) minusTwoBtnEl.classList.add('content-hidden');
+  if (minusOneBtnEl.textContent < 1) minusOneBtnEl.classList.add('content-hidden');
+  if (minusTwoBtnEl.textContent > 0) minusTwoBtnEl.classList.remove('content-hidden');
+  if (minusOneBtnEl.textContent > 0) minusOneBtnEl.classList.remove('content-hidden');
+}
+
