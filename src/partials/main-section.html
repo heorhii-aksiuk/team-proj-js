@@ -7,7 +7,7 @@
   <div class="pagination">
     <ul class="pagination__list list">
       <li class="pagination__item">
-        <button class="pagination__btn pagination__btn-arrows" id="previous-btn" type="button">
+        <button class="pagination__btn pagination__btn-arrows" id="previous-page-btn" type="button">
         <svg class="pagination__svg" width="16" height="16">
           <use href="./images/sprite.svg#icon-arrow-left">
           </use>
@@ -17,9 +17,9 @@
     <li class="pagination__item pagination__mobile-hidden">
       <button class="pagination__btn" id="first-page-btn" type="button"></button>
     </li>
-      <li class="pagination__item pagination__mobile-hidden content-hidden">
+      <li class="pagination__item pagination__mobile-hidden content-hidden" id="previous-dots-li">
         <button class="pagination__btn" id="previous-dots-btn" type="button">
-          <svg class="pagination__svg" width="11" height="16">
+          <svg class="pagination__svg" id="previous-dots" width="11" height="16">
             <use href="./images/sprite.svg#icon-dots">
             </use>
           </svg>
@@ -32,7 +32,7 @@
         <button class="pagination__btn " id="minus-1-btn" type="button"></button>
       </li>
       <li class="pagination__item">
-        <button class="pagination__btn pagination__btn-actve" id="current-page-btn" type="button">1</button>
+        <button class="pagination__btn pagination__btn-active" id="current-page-btn" type="button">1</button>
       </li>
       <li class="pagination__item">
         <button class="pagination__btn" id="plus-1-btn" type="button"></button>
@@ -41,7 +41,7 @@
         <button class="pagination__btn" id="plus-2-btn" type="button"></button>
       </li>
       
-      <li class="pagination__item pagination__mobile-hidden content-hidden">
+      <li class="pagination__item pagination__mobile-hidden content-hidden" id="next-dots-li">
         <button class="pagination__btn" id="next-dots-btn" type="button">
           <svg class="pagination__svg" width="11" height="16">
             <use href="./images/sprite.svg#icon-dots">
@@ -53,8 +53,8 @@
         <button class="pagination__btn" id="last-page-btn" type="button"></button>
       </li>
       <li class="pagination__item">
-        <button class="pagination__btn pagination__btn-arrows" id="next-btn" type="button">
-        <svg class="pagination__svg" width="16" height="16">
+        <button class="pagination__btn pagination__btn-arrows" id="next-page-btn" type="button">
+        <svg class="pagination__svg" id="next-dots" width="16" height="16">
           <use href="./images/sprite.svg#icon-arrow-right">
           </use>
         </svg>
