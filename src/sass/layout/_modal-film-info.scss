@@ -4,16 +4,15 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: $black-color;
-  //   opacity: 0.25;
+  background-color: #00000025;
   z-index: 999;
 }
 
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+// .is-hidden {
+//   opacity: 0;
+//   visibility: hidden;
+//   pointer-events: none;
+// }
 
 .modal-window {
   width: 280px;
