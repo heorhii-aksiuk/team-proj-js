@@ -24,12 +24,12 @@
   transform: translate(-50%, -50%);
   margin: 20px 0;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-min-size) {
     width: 618px;
     height: 562px;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $desktop-min-size) {
     width: 882px;
     height: 568px;
   }
@@ -40,7 +40,7 @@
     right: 10px;
     width: 30px;
     height: 30px;
-    background-color: transparent;
+    background-color: $white-color;
     border: 0;
     cursor: pointer;
     padding: 8px;
@@ -56,13 +56,13 @@
     overflow-x: auto;
     max-height: 100vh;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet-min-size) {
       padding: 42px 30px 40px 28px;
       overflow-x: hidden;
       display: flex;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $desktop-min-size) {
       padding: 50px 30px 40.2px 30px;
     }
 
@@ -70,17 +70,17 @@
       width: 240px;
       height: 356.57px;
       border-radius: 5px;
-      background-color: aqua;
+      background-color: #5f5b5b;
       margin-bottom: 30px;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $tablet-min-size) {
         width: 264px;
         height: 373.55px;
         margin-bottom: 0;
         margin-right: 32px;
       }
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: $desktop-min-size) {
         width: 396px;
         height: 477.8px;
       }
@@ -89,11 +89,11 @@
     .modal-window-container-info {
       width: 240px;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $tablet-min-size) {
         width: 264px;
       }
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: $desktop-min-size) {
         width: 396px;
       }
 
@@ -104,7 +104,7 @@
         line-height: 1.15;
         text-transform: uppercase;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: $desktop-min-size) {
           font-size: 30px;
           line-height: 1.16;
         }
@@ -179,7 +179,7 @@
 
         .film-info-list-item:not(:last-child) {
           margin-right: 39px;
-          @media screen and (min-width: 1024px) {
+          @media screen and (min-width: $desktop-min-size) {
             margin-right: 83px;
           }
         }
@@ -189,11 +189,11 @@
     .modal-window-container-about {
       width: 240px;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $tablet-min-size) {
         width: 264px;
       }
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: $desktop-min-size) {
         width: 396px;
       }
 
@@ -211,11 +211,11 @@
         font-size: 12px;
         line-height: 1.67;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $tablet-min-size) {
           margin-bottom: 20px;
         }
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: $desktop-min-size) {
           margin-bottom: 21px;
         }
       }
@@ -233,11 +233,11 @@
         padding: 14px 8.28px 12px 8.28px;
         text-transform: uppercase;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $tablet-min-size) {
           width: 125.03px;
         }
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: $desktop-min-size) {
           width: 136px;
         }
       }
@@ -249,11 +249,11 @@
       .modal-btn:not(:last-child) {
         margin-right: 10px;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $tablet-min-size) {
           margin-right: 14.94px;
         }
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: $desktop-min-size) {
           margin-right: 15px;
         }
       }
