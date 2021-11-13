@@ -1,254 +1,151 @@
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: $black-color;
-  // opacity: 0.25;
-  z-index: 999;
-}
-
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.modal-window {
+.film-info-frame {
   width: 280px;
-  background-color: $white-color;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 20px 0;
-
-  @media screen and (min-width: 768px) {
+  padding: 48px 20px 41px 20px;
+  overflow-x: auto;
+  position: relative;
+  margin: auto;
+  @media screen and (min-width: $tablet-min-size) {
+    display: flex;
+    margin: auto;
     width: 618px;
-    height: 562px;
+    padding: 42px 30px 40px 28px;
   }
-
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $desktop-min-size) {
+    display: flex;
     width: 882px;
-    height: 568px;
+    padding: 50px 30px 40px 30px;
   }
-
-  .modal-close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    padding: 8px;
-
-    .modal-close-button-icon {
-      width: 14px;
-      height: 14px;
+}
+.poster {
+  padding: 0 0 31px 0;
+  @media screen and (min-width: $tablet-min-size) {
+    padding: 0 32px 0 0;
+  }
+}
+.main-img {
+  max-width: 240px;
+  border-radius: 5px;
+  @media screen and (min-width: $tablet-min-size) {
+    max-width: 264px;
+  }
+  @media screen and (min-width: $desktop-min-size) {
+    max-width: 396px;
+    max-height: 477.8px;
+  }
+}
+.summary {
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    @media screen and (min-width: $desktop-min-size) {
+      font-size: 30px;
+      line-height: 1.17;
     }
   }
-
-  .modal-window-container {
-    padding: 48px 20px 41px 20px;
-    overflow-x: auto;
-    max-height: 100vh;
-
-    @media screen and (min-width: 768px) {
-      padding: 42px 30px 40px 28px;
-      overflow-x: hidden;
-      display: flex;
+  &__rate{margin-bottom: 20px;}
+  &__item {
+    display: flex;
+  }
+  &__item:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+  &__name {
+    color: $grey-modal-color;
+    min-width: 108px;
+    font-size: 12px;
+    font-weight: 500;
+line-height: 1.33;
+@media screen and (min-width: $desktop-min-size) {
+  min-width: 152px;
+}
+  }
+  &__data-title {
+    text-transform: uppercase;
+    font-size: 12px;
+line-height: 1.33;
+font-weight: 500;
+  }
+  &__data-genre {
+    font-size: 12px;
+    line-height: 1.33;
+    font-weight: 500;
+  }
+  &__data-accent {
+    padding: 1px 9px 1px 10px;
+    color: $white-color;
+    background-color: $orange-color;
+    border-radius: 5px;
+  }
+  &__data-votes, &__data-popular {
+    font-size: 12px;
+    line-height: 1.17;
+    font-weight: 500;
+  }
+  &__description{
+    margin-bottom: 21px;
+    @media screen and (min-width: $tablet-min-size) and (max-width: $tablet-max-size) {
+      margin-bottom: 20px;
     }
-
-    @media screen and (min-width: 1024px) {
-      padding: 50px 30px 40.2px 30px;
-    }
-
-    .modal-window-container-poster {
-      width: 240px;
-      height: 356.57px;
-      border-radius: 5px;
-      background-color: aqua;
-      margin-bottom: 30px;
-
-      @media screen and (min-width: 768px) {
-        width: 264px;
-        height: 373.55px;
-        margin-bottom: 0;
-        margin-right: 32px;
-      }
-
-      @media screen and (min-width: 1024px) {
-        width: 396px;
-        height: 477.8px;
-      }
-    }
-
-    .modal-window-container-info {
-      width: 240px;
-
-      @media screen and (min-width: 768px) {
-        width: 264px;
-      }
-
-      @media screen and (min-width: 1024px) {
-        width: 396px;
-      }
-
-      .film-name-heading {
-        margin-bottom: 20px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 1.15;
-        text-transform: uppercase;
-
-        @media screen and (min-width: 1024px) {
-          font-size: 30px;
-          line-height: 1.16;
-        }
-      }
-
-      .film-info-list {
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: space-between;
-
-        .film-info-list-item {
-          .film-info-list-item-left {
-            margin-right: 20px;
-          }
-
-          .film-info-text-left {
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 1.33;
-            color: #8c8c8c;
-          }
-
-          .film-info-text-left:not(:last-child) {
-            margin-bottom: 10px;
-          }
-
-          .film-info-text-right {
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 1.33;
-            margin-bottom: 10px;
-            display: flex;
-          }
-
-          .film-info-text-right:not(:last-child) {
-            margin-bottom: 10px;
-          }
-
-          .film-info-text-right-title {
-            text-transform: uppercase;
-          }
-
-          .film-info-text-right-numbers {
-            line-height: 1.16;
-            text-align: center;
-
-            .film-rating-right {
-              padding: 2px 0;
-              display: block;
-            }
-
-            .film-rating-left {
-              width: 36px;
-              height: 16px;
-              border-radius: 5px;
-              font-size: 12px;
-              line-height: 1.16;
-              background-color: $orange-color;
-              color: $white-color;
-              display: block;
-              padding: 2px 0;
-            }
-          }
-        }
-      }
-    }
-
-    .modal-window-container-about {
-      width: 240px;
-
-      @media screen and (min-width: 768px) {
-        width: 264px;
-      }
-
-      @media screen and (min-width: 1024px) {
-        width: 396px;
-      }
-
-      .about-heading {
-        margin-bottom: 10px;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 1.33;
-        text-transform: uppercase;
-      }
-
-      .about-text {
-        margin-bottom: 21px;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 1.67;
-
-        @media screen and (min-width: 768px) {
-          margin-bottom: 20px;
-        }
-
-        @media screen and (min-width: 1024px) {
-          margin-bottom: 21px;
-        }
-      }
-    }
-
-    .modal-window-container-forms {
-      display: flex;
-
-      .modal-btn {
-        width: 112.58px;
-        height: 44px;
-        min-width: 112.58px;
-        font-size: 12px;
-        line-height: 1.33;
-        // align-items: center;
-        // text-align: center;
-        padding: 14px 8.28px 12px 8.28px;
-        text-transform: uppercase;
-
-        @media screen and (min-width: 768px) {
-          width: 125.03px;
-        }
-
-        @media screen and (min-width: 1024px) {
-          width: 136px;
-        }
-      }
-
-      .modal-btn-watched {
-        padding: 1px 8.28px;
-      }
-
-      .modal-btn:not(:last-child) {
-        margin-right: 10px;
-
-        @media screen and (min-width: 768px) {
-          margin-right: 14.94px;
-        }
-
-        @media screen and (min-width: 1024px) {
-          margin-right: 15px;
-        }
-      }
-    }
+  }
+  &__description-title {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+  line-height: 1.33;
+  font-weight: 500;
+  
+  }
+  &__description-text {
+    font-size: 12px;
+  font-weight: 500;
+    line-height: 1.67;
   }
 }
 
-.modal-window-container::-webkit-scrollbar {
-  width: 0;
+.modal-wrap-btn {
+  display: flex;
 }
+.modal-btn {
+  width: 112px;
+  height: 44px;
+  font-size: 12px;
+  line-height: 1.33;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: $white-color;
+  cursor: pointer;
+  border: 1px solid $black-color;
+  transition: all $cubic-bezier;
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $orange-color;
+    border: 1px solid $orange-color;
+  }
+  &:first-child {
+    margin-right: 15px;
+  }
+  @media screen and (min-width: $tablet-min-size) {
+    width: 125px;
+  }
+  @media screen and (min-width: $desktop-min-size) {
+    width: 136px;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  color: $white-color;
+  cursor: pointer;}
