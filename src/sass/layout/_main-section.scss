@@ -58,13 +58,14 @@
     border: none;
     border-radius: 5px;
     background-color: transparent;
+    cursor: pointer;
   }
 
   &__svg {
     display: inline-block;
   }
 
-  &__btn-actve {
+  &__btn-active {
     background-color: $orange-color;
     color: $white-color;
   }
@@ -89,13 +90,13 @@
       width: 31.75px;
     }
 
-    &__btn-arrows, &__btn-actve {
+    &__btn-arrows, &__btn-active {
     width: 40px;
     }
 
     &__mobile-hidden {
-    display: block;
-  }
+    display: inline-block;
+    }
   }
 }
 
