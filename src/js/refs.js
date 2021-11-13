@@ -7,6 +7,8 @@ const refs = {
   libraryBtnEl: document.querySelector('.library-button'),
   searchFormEl: document.querySelector('.search-form'),
   libraryMenuEl: document.querySelector('.library-menu'),
+  preloader: document.getElementById('preloader-page'),
+  percentDisplay: document.getElementById('loading-percent'),
 };
 
 export const {
@@ -18,5 +20,6 @@ export const {
   searchForm,
   searchFormEl,
   libraryMenuEl,
+  preloader,
+  percentDisplay,
 } = refs;
-
