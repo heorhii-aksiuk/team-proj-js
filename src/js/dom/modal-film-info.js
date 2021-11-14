@@ -1,4 +1,3 @@
-import modal_one_movie_markup from '../../templates/film-info.hbs';
 import { renderParamsCard } from '../api/fetch-info';
 // import filmCard from '../../templates/film-info.hbs'
 
