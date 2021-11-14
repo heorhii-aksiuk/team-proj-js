@@ -28,5 +28,5 @@ function renderMovieSeorchParam(id) {
 
       id = e.target.dataset.id;
       renderMovieSeorchParam(id);
-      modal.classList.remove('is-hidden')
+      modal.classList.remove('hidden')
   });
