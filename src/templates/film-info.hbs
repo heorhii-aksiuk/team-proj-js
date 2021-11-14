@@ -1,0 +1,47 @@
+<div class="film-info-frame">
+    <div class="poster">
+        {{#if poster_path}}
+        <img class="main-img" src="https://www.themoviedb.org/t/p/w500{{poster_path}}"
+            onerror="this.onerror=null;this.src='../images/gfm-no-image.jpg'"
+            alt="{{title}}" title="{{title}}" />
+        {{/if}}
+    </div>
+    <div class="summary">
+        <h2 class="summary__title">{{title}}</h2>
+            <ul class="summary__rate">
+                <li class="summary__item">
+                    <p class="summary__name">Vote / Votes</p>
+                    <p class="summary__data-votes">
+                        <span class="summary__data-accent">{{vote_average}}</span>
+                          /  
+                        <span class="summary__data-vote">{{vote_count}}</span>
+                    </p>
+                </li>
+                <li class="summary__item">
+                    <p class="summary__name">Popularity</p>
+                    <p class="summary__data-popular">{{popularity}}</p>
+                </li>
+                <li class="summary__item">
+                    <p class="summary__name">Original title</p>
+                    <p class="summary__data-title">{{original_title}}</p>
+                </li>
+                <li class="summary__item">
+                    <p class="summary__name">Genre</p>
+                    <p class="summary__data-genre">{{#if genres}}{{#each genres}}<span>{{this.name}}{{#unless @last}},{{/unless}}</span>{{/each}}{{else}}<span>N/A</span>{{/if}}</p>
+                </li>
+            </ul>
+        <div class="summary__description">
+            <p class="summary__description-title">About</p>
+            <p class="summary__description-text">{{overview}}</p>
+        </div>
+        <div class="modal-wrap-btn">
+          <button class="modal-btn" type="button">add to watched</button>
+          <button class="modal-btn" type="button">add to queue</button>
+        </div> 
+    </div>
+</div>
+
+
+
+
+
