@@ -34,6 +34,23 @@
     height: 568px;
   }
 
+  .modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+
+    .modal-close-button-icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
   .modal-window-container {
     padding: 48px 20px 41px 20px;
     overflow-x: auto;
@@ -95,12 +112,12 @@
 
       .film-info-list {
         margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
 
         .film-info-list-item {
-          margin-bottom: 10px;
-
-          .td-margin {
-            margin-right: 10px;
+          .film-info-list-item-left {
+            margin-right: 20px;
           }
 
           .film-info-text-left {
@@ -110,10 +127,20 @@
             color: #8c8c8c;
           }
 
+          .film-info-text-left:not(:last-child) {
+            margin-bottom: 10px;
+          }
+
           .film-info-text-right {
             font-weight: 500;
             font-size: 12px;
             line-height: 1.33;
+            margin-bottom: 10px;
+            display: flex;
+          }
+
+          .film-info-text-right:not(:last-child) {
+            margin-bottom: 10px;
           }
 
           .film-info-text-right-title {
@@ -122,6 +149,12 @@
 
           .film-info-text-right-numbers {
             line-height: 1.16;
+            text-align: center;
+
+            .film-rating-right {
+              padding: 2px 0;
+              display: block;
+            }
 
             .film-rating-left {
               width: 36px;
@@ -129,10 +162,10 @@
               border-radius: 5px;
               font-size: 12px;
               line-height: 1.16;
-              background-color: &orange-color;
+              background-color: $orange-color;
               color: $white-color;
-              display: inline-block;
-              text-align: center;
+              display: block;
+              padding: 2px 0;
             }
           }
         }
@@ -180,7 +213,13 @@
       .modal-btn {
         width: 112.58px;
         height: 44px;
-        text-align: center;
+        min-width: 112.58px;
+        font-size: 12px;
+        line-height: 1.33;
+        // align-items: center;
+        // text-align: center;
+        padding: 14px 8.28px 12px 8.28px;
+        text-transform: uppercase;
 
         @media screen and (min-width: 768px) {
           width: 125.03px;
@@ -189,6 +228,10 @@
         @media screen and (min-width: 1024px) {
           width: 136px;
         }
+      }
+
+      .modal-btn-watched {
+        padding: 1px 8.28px;
       }
 
       .modal-btn:not(:last-child) {
