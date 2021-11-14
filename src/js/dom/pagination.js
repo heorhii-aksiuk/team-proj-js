@@ -16,6 +16,7 @@ import {
 import { showAllFilms } from './show-all-films'
 // Настройки для отрисовки фильмов по умолчанию
 let totalPages = 1000;
+// Настройки для стартовой страницы
 const homePage = 1;
 let lastPage = 1;
 let currentPage = homePage;
