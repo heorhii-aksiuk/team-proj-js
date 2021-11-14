@@ -13,7 +13,7 @@ export function createMarkup(data) {
     genres: genres.filter(genre => film.genre_ids.includes(genre.id)),
     year: new Date(film.release_date).getFullYear()
   }));
-  console.log(filmsWithGenre);
+  // console.log(filmsWithGenre);
   mainCardListEl.innerHTML = filmCard(filmsWithGenre);
 }
 
