@@ -36,3 +36,6 @@ body {
   color: $black-color;
   background-color: $white-color;
 }
+body.modal-open {
+  overflow: hidden;
+}
