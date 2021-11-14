@@ -27,4 +27,4 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"../api/fetch-all-films":"YmeL","../refs":"VyiV"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/dom/pagination"),require("./js/dom/show-all-films"),require("./js/dom/show-searched-films"),require("./js/dom/home-library-page-switch"),require("./js/dom/loader");
 },{"./sass/main.scss":"clu1","./js/dom/pagination":"u2uh","./js/dom/show-all-films":"NcNC","./js/dom/show-searched-films":"JuOL","./js/dom/home-library-page-switch":"Li7T","./js/dom/loader":"cHhr"}]},{},["Focm"], null)
-//# sourceMappingURL=/team-proj-js/src.66237fa2.js.map
+//# sourceMappingURL=/team-proj-js/src.c813ed48.js.map
