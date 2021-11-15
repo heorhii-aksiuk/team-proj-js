@@ -9,3 +9,8 @@
     z-index: 1000;
     transition: visibility $cubic-bezier, opacity $cubic-bezier;
   }
+  .backdrop_hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }

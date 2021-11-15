@@ -22,7 +22,6 @@ mainCardListEl.addEventListener('click', e => {
   id = e.target.dataset.id;
   renderMovieSearchParam(id);
   backdrop.classList.remove('hidden');
-  modalFrame.classList.remove('backdrop-hidden');
   bodyEl.classList.add('modal-open');
   window.addEventListener('keydown', modalCloseByEsc);
   backdrop.addEventListener('click', backdropClick);
@@ -35,18 +34,17 @@ function modalClose() {
   backdrop.removeEventListener('click', backdropClick);
   backdrop.classList.add('hidden');
   bodyEl.classList.remove('modal-open');
-  modalFrame.classList.remove('backdrop-hidden');
   modalFrame.innerHTML = '';
 }
 
-function backdropClick(event) {
-  if (event.currentTarget === event.target) {
+function backdropClick(e) {
+  if (e.currentTarget === e.target) {
     modalClose();
   }
 }
 
-function modalCloseByEsc(event) {
-  if (event.code === 'Escape') {
+function modalCloseByEsc(e) {
+  if (e.code === 'Escape') {
     modalClose();
   }
 }
