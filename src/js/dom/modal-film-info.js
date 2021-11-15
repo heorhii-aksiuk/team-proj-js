@@ -1,13 +1,13 @@
 import { renderParamsCard } from '../api/fetch-info';
 import filmCard from '../../templates/film-info.hbs';
 
-const modal = document.querySelector('.modal-backdrop');
+const modal = document.querySelector('.backdrop');
 const modalContainer = document.querySelector('.modal-wrap');
 const imagesRef = document.querySelector('.js-collection__list');
 
 let id = 'id';
 
-function renderMovieSeorchParam(id) {
+function renderMovieSearchParam(id) {
   renderParamsCard(id)
     .then(data => {
       modalContainer.innerHTML = filmCard(data);
@@ -22,6 +22,7 @@ imagesRef.addEventListener('click', e => {
   }
 
   id = e.target.dataset.id;
-  renderMovieSeorchParam(id);
+  renderMovieSearchParam(id);
   modal.classList.remove('hidden');
+  document.body.classList.toggle('modal-open');
 });
