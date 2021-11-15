@@ -23,7 +23,7 @@ mainCardListEl.addEventListener('click', e => {
   renderMovieSearchParam(id);
   backdrop.classList.remove('hidden');
   modalFrame.classList.remove('backdrop-hidden');
-  document.body.classList.add('modal-open');
+  bodyEl.classList.add('modal-open');
   window.addEventListener('keydown', modalCloseByEsc);
   backdrop.addEventListener('click', backdropClick);
   closeByButton();
@@ -34,7 +34,7 @@ function modalClose() {
   window.removeEventListener('keydown', modalCloseByEsc);
   backdrop.removeEventListener('click', backdropClick);
   backdrop.classList.add('hidden');
-  document.body.classList.remove('modal-open');
+  bodyEl.classList.remove('modal-open');
   modalFrame.classList.remove('backdrop-hidden');
   modalFrame.innerHTML = '';
 }
