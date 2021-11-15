@@ -21,10 +21,10 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"./api-data":"MF9v"}],"JuOL":[function(require,module,exports) {
 "use strict";var e=u(require("../api/fetch-by-search")),r=require("./show-all-films"),t=require("../refs");function u(e){return e&&e.__esModule?e:{default:e}}function a(u){u.preventDefault();const a=u.target.elements.query.value;(0,e.default)(a).then(r.createMarkup),t.searchForm.reset()}t.searchForm.addEventListener("submit",a);
 },{"../api/fetch-by-search":"F65M","./show-all-films":"NcNC","../refs":"VyiV"}],"Li7T":[function(require,module,exports) {
-"use strict";var e=require("../refs");function r(){e.headerEl.classList.add("header-home"),e.headerEl.classList.remove("header-library"),window.location="/"}function a(){e.headerEl.classList.add("header-library"),e.headerEl.classList.remove("header-home")}e.homeBtnEl.addEventListener("click",r),e.libraryBtnEl.addEventListener("click",a);
+"use strict";var e=require("../refs");function r(){e.headerEl.classList.add("header-home"),e.headerEl.classList.remove("header-library"),window.location.reload()}function a(){e.headerEl.classList.add("header-library"),e.headerEl.classList.remove("header-home")}e.homeBtnEl.addEventListener("click",r),e.libraryBtnEl.addEventListener("click",a);
 },{"../refs":"VyiV"}],"cHhr":[function(require,module,exports) {
 "use strict";var e=require("../api/fetch-all-films"),t=require("../refs");let r,n=0,s=1;function o(e){const t=e.films;r=t.length;for(let n=0;n<r;n++){const e=new Image;e.onload=l,e.onerror=l,e.src=t[n].poster_path}}function l(){n++,t.percentDisplay.innerHTML=Math.round(100/r*n)+"%",n>=r&&setTimeout(()=>{t.preloader.classList.contains("done")||t.preloader.classList.add("done")},500)}(0,e.fetchAllFilms)(s).then(o);
 },{"../api/fetch-all-films":"YmeL","../refs":"VyiV"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/dom/pagination"),require("./js/dom/show-all-films"),require("./js/dom/show-searched-films"),require("./js/dom/home-library-page-switch"),require("./js/dom/loader");
 },{"./sass/main.scss":"clu1","./js/dom/pagination":"u2uh","./js/dom/show-all-films":"NcNC","./js/dom/show-searched-films":"JuOL","./js/dom/home-library-page-switch":"Li7T","./js/dom/loader":"cHhr"}]},{},["Focm"], null)
-//# sourceMappingURL=/team-proj-js/src.7f017845.js.map
+//# sourceMappingURL=/team-proj-js/src.255c02bc.js.map
