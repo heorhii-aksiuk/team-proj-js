@@ -19,6 +19,8 @@ const refs = {
   nextDotsLiEl: document.getElementById('next-dots-li'),
   lastPageBtnEl: document.getElementById('last-page-btn'),
   nextPageBtnEl: document.getElementById('next-page-btn'),
+  preloader: document.getElementById('preloader-page'),
+  percentDisplay: document.getElementById('loading-percent'),
 };
 
 export const {
@@ -42,5 +44,7 @@ export const {
   nextDotsLiEl,
   lastPageBtnEl,
   nextPageBtnEl,
-} = refs;
+  preloader,
+  percentDisplay,
 
+} = refs;
