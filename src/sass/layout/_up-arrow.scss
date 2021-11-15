@@ -1,0 +1,17 @@
+#up-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 99;
+  font-size: 28px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: $orange-color;
+  cursor: pointer;
+
+  @media screen and (min-width: $desktop-min-size) {
+    right: 15px;
+  }
+}
