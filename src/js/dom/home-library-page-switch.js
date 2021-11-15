@@ -6,7 +6,7 @@ libraryBtnEl.addEventListener('click', showLibraryPage);
 function showHomePage() {
   headerEl.classList.add('header-home');
   headerEl.classList.remove('header-library');
-  window.location = '/';  
+  window.location.reload();  
 }
 
 function showLibraryPage() {
