@@ -7,7 +7,6 @@ let id = 'id';
 function renderMovieSearchParam(id) {
   renderParamsCard(id)
     .then(data => {
-      console.log('data:', data)
       modalFrame.innerHTML = filmCard(data);
     })
     .catch(() => {});
@@ -26,7 +25,6 @@ mainCardListEl.addEventListener('click', e => {
   window.addEventListener('keydown', modalCloseByEsc);
   backdrop.addEventListener('click', backdropClick);
   closeByButton();
-  listenerModalBtn();
 });
 
 function modalClose() {
