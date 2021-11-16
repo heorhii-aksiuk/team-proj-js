@@ -1,4 +1,6 @@
-import { headerEl, homeBtnEl, libraryBtnEl, searchFormEl, libraryMenuEl } from '../refs';
+import { headerEl, homeBtnEl, libraryBtnEl } from '../refs';
+import { showAllFilms } from './show-all-films'
+
 
 homeBtnEl.addEventListener('click', showHomePage);
 libraryBtnEl.addEventListener('click', showLibraryPage);
@@ -6,7 +8,7 @@ libraryBtnEl.addEventListener('click', showLibraryPage);
 function showHomePage() {
   headerEl.classList.add('header-home');
   headerEl.classList.remove('header-library');
-  window.location.reload();  
+  showAllFilms(1)
 }
 
 function showLibraryPage() {
