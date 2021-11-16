@@ -14,33 +14,23 @@ import {
 } from '../refs';
 
 import { showAllFilms } from './show-all-films'
-// Настройки для отрисовки фильмов по умолчанию
+import { showSearchedFilmsPagination } from './show-searched-films';
+
 let totalPages = 1000;
-// Настройки для стартовой страницы
 const homePage = 1;
 let lastPage = 1;
 let currentPage = homePage;
-
-// Функция, которая будет подключать пагинацию к страничке на которой находится пользователь
-/* // В условия проверка на какой страничке находится пользователь
-if () {
-// функция для пагинации поискового запроса
-} else if () {
-  // функция для пагинации watched
-} else if (){
-// функция для пагинации queue
-} else {
-// функция для пагинации главной странички
-  pagination(totalPages, showAllFilms);
-} */
-
-// Это вызов функции пагинации для главной странички, принимает количество страниц, и функцию для отрисовки всего в дом
-// Функция по умолчанию, после реальизации проверки сверху, удалить от сюда
-pagination(totalPages, showAllFilms);
   
+// Пагинация по поисковому запросу
+// pagination(totalPages, showSearchedFilmsPagination);
+
+// Пагинация по умолчанию
+pagination(totalPages, showAllFilms);
+// Как реализовать переключение с одной на вторую я не знаю
+
 // Реализация функционала
 
-function pagination(totalPages, showFilmsFunction) {
+export function pagination(totalPages, showFilmsFunction) {
   lastPage = totalPages;
   startPaginationSetup();
 
