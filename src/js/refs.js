@@ -21,6 +21,8 @@ const refs = {
   nextPageBtnEl: document.getElementById('next-page-btn'),
   preloader: document.getElementById('preloader-page'),
   percentDisplay: document.getElementById('loading-percent'),
+  addWatched: document.querySelector('.js-addWatched'),
+  addQueue: document.querySelector('.js-addQueue'),
 };
 
 export const {
@@ -46,5 +48,6 @@ export const {
   nextPageBtnEl,
   preloader,
   percentDisplay,
-
+  addWatched,
+  addQueue,
 } = refs;
