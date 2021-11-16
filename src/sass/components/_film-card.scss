@@ -2,19 +2,23 @@
     &__img {
       border-radius: 5px;
       transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      object-fit: cover;
       &:hover,
       &:focus {
         box-shadow: (7px -7px 21px, rgba(255, 107, 1, 0.6));
         opacity: 0.9;
       }
       @media screen and (max-width: $phone-max-size) {
-          max-width: 280px;
+        height: 402px;
+        width: 280px;
       }
       @media screen and (min-width: $tablet-min-size) and (max-width: $tablet-max-size) {  
-          max-width: 294px;
+        height: 398px;
+        width: 294px;
       }
       @media screen and (min-width: $desktop-min-size) {
-          max-width: 274px;
+        height: 398px;
+        width: 274px;
     }
     }
     &__wrap {
