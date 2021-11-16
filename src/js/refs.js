@@ -21,6 +21,8 @@ const refs = {
   nextPageBtnEl: document.getElementById('next-page-btn'),
   preloader: document.getElementById('preloader-page'),
   percentDisplay: document.getElementById('loading-percent'),
+  backdrop: document.querySelector('.backdrop'),
+  modalFrame: document.querySelector('.modal-wrap'),
 };
 
 export const {
@@ -46,5 +48,6 @@ export const {
   nextPageBtnEl,
   preloader,
   percentDisplay,
-
+  backdrop,
+  modalFrame,
 } = refs;

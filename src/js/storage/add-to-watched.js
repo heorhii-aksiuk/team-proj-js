@@ -1,13 +1,12 @@
-export default function toggleToWatched() {
-  let filmsWatchedArr = [];
-  let localStorageData = localStorage.getItem('filmsWatched');
-  if (localStorageData !== null) {
-    filmsWatchedArr.push(...JSON.parse(localStorageData));
+
+let localStorageData = JSON.parse(localStorage.getItem('filmsWatched'));
+if (localStorageData === null) {
+  localStorage.setItem('filmsWatched', JSON.stringify([]));
+}
+export function toggleToWatched(id) {
+    localStorageData = JSON.parse(localStorage.getItem('filmsWatched'));
+  if (!localStorageData.includes(id)) {
+    localStorageData.push(id);
+    localStorage.setItem('filmsWatched', JSON.stringify(localStorageData));
   }
-  if (filmsWatchedArr.find(el => el.id === selectFilm.id)) {
-    filmsWatchedArr = filmsWatchedArr.filter(el => el.id !== selectFilm.id);
-  } else {
-    filmsWatchedArr.push(selectFilm);
-  }
-  localStorage.setItem('filmsWatched', JSON.stringify(filmsWatchedArr));
 }

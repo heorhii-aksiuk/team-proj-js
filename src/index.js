@@ -7,5 +7,7 @@ import './js/dom/modal-group-info';
 import './js/dom/loader';
 import './js/dom/modal-film-info';
 import './js/dom/dark-theme';
+import './js/storage/add-to-watched';
+import './js/storage/add-to-queue';
 
 
