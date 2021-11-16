@@ -1,5 +1,3 @@
-// import from '..partials/up-arrow';
-
 window.onscroll = function () {
   scrollFunction();
 };
