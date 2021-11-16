@@ -8,9 +8,6 @@
   transition: transform $cubic-bezier;
   background-color: $white-color;
   border-radius: 4px;
-  // .backdrop_hidden & {
-  //   transform: translate(-50%, -50%) scale(3);
-  // }
   @media screen and (min-width: 768px) {
     width: fit-content;
   }
@@ -18,8 +15,6 @@
     max-width: 97%;
   }
 }
-
-
 .film-info-frame {
   width: 280px;
   padding: 48px 20px 41px 20px;
