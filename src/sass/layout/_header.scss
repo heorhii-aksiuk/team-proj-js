@@ -1,26 +1,50 @@
 .header {
-  padding-top: 46px;
   height: 230px;
-
-  background-color: #c4c4c4;
+  background-color: $grey-modal-color;
   background-size: cover;
   background-position: center;
 }
-
+.header-box {
+  padding-top: 46px;
+@media screen and (min-width: $tablet-min-size) {
+  padding-top: 41px;
+}
+}
 .header-home {
   background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
     url(../images/header-img/320px-head-home.jpg);
   @media (min-device-pixel-ratio: 2) and (max-width: $phone-max-size),
     (min-resolution: 192dpi) and (max-width: $phone-max-size),
     (min-resolution: 2dppx) and (max-width: $phone-max-size) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
       url(../images/header-img/320px-head-home@2x.jpg);
   }
-  animation-name: changeOpacityH;
-  animation-duration: 800ms;
-  animation-fill-mode: forwards;
+  @media screen and (min-width: $tablet-min-size) {
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header-img/768px-head-home.jpg); 
+  }
+  @media (min-device-pixel-ratio: 2) and (min-width: $tablet-min-size),
+      (min-resolution: 192dpi) and (min-width: $tablet-min-size),
+      (min-resolution: 2dppx) and (min-width: $tablet-min-size){
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/header-img/768px-head-home@2x.jpg);
+    }
+  @media screen and (min-width: $desktop-min-size) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header-img/1024px-head-home.jpg);  
+  }
+  @media (min-device-pixel-ratio: 2) and (min-width: $desktop-min-size),
+      (min-resolution: 192dpi) and (min-width: $desktop-min-size),
+      (min-resolution: 2dppx) and (min-width: $desktop-min-size) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/header-img/1024px-head-home@2x.jpg);
+    }
+        // animation-name: changeOpacityH;
+        // animation-duration: 800ms;
+        // animation-fill-mode: forwards;
 }
-
 .header-library {
   background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
     url(../images/header-img/320px-head-library.jpg);
@@ -30,9 +54,29 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
       url(../images/header-img/320px-head-library@2x.jpg);
   }
-  animation-name: changeOpacityL;
-  animation-duration: 800ms;
-  animation-fill-mode: forwards;
+  @media screen and (min-width: $tablet-min-size) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header-img/768px-head-library.jpg);  
+  }
+  @media (min-device-pixel-ratio: 2) and (min-width: $tablet-min-size),
+      (min-resolution: 192dpi) and (min-width: $tablet-min-size),
+      (min-resolution: 2dppx) and (min-width: $tablet-min-size) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/header-img/768px-head-library@2x.jpg);
+    }
+  @media screen and (min-width: $desktop-min-size) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header-img/1024px-head-library.jpg);
+  }
+  @media (min-device-pixel-ratio: 2) and (min-width: $desktop-min-size),
+      (min-resolution: 192dpi) and (min-width: $desktop-min-size),
+      (min-resolution: 2dppx) and (min-width: $desktop-min-size) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/header-img/1024px-head-library@2x.jpg);
+    }
+  // animation-name: changeOpacityL;
+  // animation-duration: 800ms;
+  // animation-fill-mode: forwards;
 }
 
 .header-home .library-menu,
@@ -46,9 +90,8 @@
   display: block;
   width: 100%;
   height: 3px;
-
   left: 0px;
-  bottom: -1px;
+  bottom: -3px;
   background-color: $orange-color;
 }
 
@@ -57,7 +100,6 @@
   align-items: flex-end;
   justify-content: space-between;
 }
-
 .logo {
   display: flex;
   align-items: baseline;
@@ -72,9 +114,12 @@
     font-size: 30px;
     line-height: 1.17;
     color: $white-color;
+    @media screen and (min-width: $tablet-min-size) {
+        display: block;
+        margin-left: 10px;  
+    }
   }
 }
-
 .menu {
   display: flex;
 
@@ -102,13 +147,17 @@
 
 .search-form {
   margin: 0 auto;
-  margin-top: 43px;
+  margin-top: 41px;
   position: relative;
+  @media screen and (min-width: $tablet-min-size) {
+    margin-top: 43px;
+    width: 336px;
+    margin-top: 41px;
+  }
 
   &__input {
     width: 100%;
     height: 100%;
-    padding: 0 1px 4px 1px;
     border: none;
     outline: none;
     caret-color: $white-color;
@@ -170,88 +219,19 @@
   margin-right: 15px;
 }
 
-// TABLET STYLES
-
-@media screen and (min-width: $tablet-min-size) {
-  .header {
-    padding-top: 41px;
-  }
-
-  .header-home {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(../images/header-img/768px-head-home.jpg);
-    @media (min-device-pixel-ratio: 2) and (min-width: $tablet-min-size),
-      (min-resolution: 192dpi) and (min-width: $tablet-min-size),
-      (min-resolution: 2dppx) and (min-width: $tablet-min-size) {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-        url(../images/header-img/768px-head-home@2x.jpg);
-    }
-  }
-
-  .header-library {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(../images/header-img/768px-head-library.jpg);
-    @media (min-device-pixel-ratio: 2) and (min-width: $tablet-min-size),
-      (min-resolution: 192dpi) and (min-width: $tablet-min-size),
-      (min-resolution: 2dppx) and (min-width: $tablet-min-size) {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-        url(../images/header-img/768px-head-library@2x.jpg);
-    }
-  }
-
-  .logo__title {
-    display: block;
-    margin-left: 10px;
-  }
-
-  .search-form {
-    width: 336px;
-    margin-top: 41px;
-  }
-}
-
-// DESKTOP STYLES
-
-@media screen and (min-width: $desktop-min-size) {
-  .header-home {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(../images/header-img/1024px-head-home.jpg);
-    @media (min-device-pixel-ratio: 2) and (min-width: $desktop-min-size),
-      (min-resolution: 192dpi) and (min-width: $desktop-min-size),
-      (min-resolution: 2dppx) and (min-width: $desktop-min-size) {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-        url(../images/header-img/1024px-head-home@2x.jpg);
-    }
-    // animation-name: changeOpacity;
-    //     animation-duration: 500ms;
-    // animation-fill-mode: forwards;
-  }
-
-  .header-library {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(../images/header-img/1024px-head-library.jpg);
-    @media (min-device-pixel-ratio: 2) and (min-width: $desktop-min-size),
-      (min-resolution: 192dpi) and (min-width: $desktop-min-size),
-      (min-resolution: 2dppx) and (min-width: $desktop-min-size) {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-        url(../images/header-img/1024px-head-library@2x.jpg);
-    }
-  }
-}
-
-@keyframes changeOpacityH {
-  0% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes changeOpacityL {
-  0% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+// @keyframes changeOpacityH {
+//   0% {
+//     opacity: 0.8;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+// @keyframes changeOpacityL {
+//   0% {
+//     opacity: 0.8;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
