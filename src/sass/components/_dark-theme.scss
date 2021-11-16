@@ -2,42 +2,37 @@
 body.dark-theme {
     background-color: #333333;
     color: $white-color;  
-    
     & .card__title {
         font-style: normal;
         font-size: 12px;
         line-height: 16px;
         color: $white-color;
     }
-  
     & .card__text {
         color: $orange-color;
     }
-
     & .pagination__btn {
         color: $white-color;
     }
-
-    & .next-dots-btn {
-        background-color: tomato;
+    & .pagination__btn {
+        fill: $orange-color;
     }
-
+    & .pagination__btn-arrows {
+        background-color: #141414;
+    }
     & .footer {
         background-color: #141414;
     }
-
     & .footer__copyright {
         color: $white-color;
     }
-
     & .footer__developed {
         color: $white-color;
     }
-
     & .footer__button {
         color: $white-color;
+        background-color: $orange-color;
     }
-
     & .card__rating {
         background-color: #ff6b08;
         color: #ffffff;
