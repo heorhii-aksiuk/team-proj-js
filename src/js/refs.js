@@ -23,6 +23,8 @@ const refs = {
   percentDisplay: document.getElementById('loading-percent'),
   addWatched: document.querySelector('.js-addWatched'),
   addQueue: document.querySelector('.js-addQueue'),
+  backdrop: document.querySelector('.backdrop'),
+  modalFrame: document.querySelector('.modal-wrap'),
 };
 
 export const {
@@ -50,4 +52,6 @@ export const {
   percentDisplay,
   addWatched,
   addQueue,
+  backdrop,
+  modalFrame,
 } = refs;
