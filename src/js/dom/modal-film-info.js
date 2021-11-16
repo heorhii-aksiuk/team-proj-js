@@ -1,6 +1,8 @@
 import { renderParamsCard } from '../api/fetch-info';
 import filmCard from '../../templates/film-info.hbs';
 import { backdrop, modalFrame, mainCardListEl, bodyEl } from '../refs';
+import { toggleToWatched } from '../storage/add-to-watched.js';
+import { toggleToQueue } from '../storage/add-to-queue.js';
 
 let id = 'id';
 
@@ -8,6 +10,11 @@ function renderMovieSearchParam(id) {
   renderParamsCard(id)
     .then(data => {
       modalFrame.innerHTML = filmCard(data);
+
+      const addWatched = document.querySelector('.js-addWatched');
+      addWatched.addEventListener('click', e => toggleToWatched(data.id));
+      const addQueue = document.querySelector('.js-addQueue');
+      addQueue.addEventListener('click', e => toggleToQueue(data.id));
     })
     .catch(() => {});
 }
