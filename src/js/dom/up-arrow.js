@@ -1,16 +1,15 @@
+const mybutton = document.querySelector('[upbtn]');
 window.onscroll = function () {
   scrollFunction();
 };
-
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById('up-btn').style.display = 'block';
+  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+    mybutton.style.display = 'block';
   } else {
-    document.getElementById('up-btn').style.display = 'none';
+    mybutton.style.display = 'none';
   }
 }
-
-function topFunction() {
+mybutton.addEventListener('click', () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-}
+});

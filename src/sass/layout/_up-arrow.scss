@@ -1,17 +1,46 @@
-#up-btn {
+.upbtn_ {
+  padding: 5px;
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 10px;
-  z-index: 99;
-  font-size: 28px;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: $orange-color;
+  right: 8px;
+  z-index: 10000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: solid 1px $grey-color;
   cursor: pointer;
+  background-color: transparent;
+  align-items: center;
+  &:hover,
+  &:focus {
+    border-color: $orange-color;
+  }
+  transition: border-color $cubic-bezier;
+  line-height: 0;
+}
+.upbtn__icon {
+  width: 20px;
+  height: 20px;
+  color: $black-color;
+  .upbtn_:hover &,
+  .upbtn_:focus & {
+    color: $orange-color;
+    transition: color $cubic-bezier;
+  }
+}
 
-  @media screen and (min-width: $desktop-min-size) {
-    right: 15px;
+.add-upanimation {
+  animation: flowup 250ms $cubic-bezier;
+}
+@keyframes flowup {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
