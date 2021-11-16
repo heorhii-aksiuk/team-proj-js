@@ -8,6 +8,8 @@ import './js/dom/loader';
 import './js/dom/modal-film-info'
 import './js/storage/add-to-watched';
 import './js/storage/add-to-queue';
+import './js/dom/show-watched-films';
+import './js/dom/show-queue-films';
 
 
 
