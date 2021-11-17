@@ -12,9 +12,11 @@ export async function fetchBySearch(query, pageNumber) {
 
     const apiFetch = await fetch(url);
     const response = await apiFetch.json();
-    const { results } = response;
+    const { results, total_pages } = response;
+    //console.log(response);
     return {
       films: results,
+      totalPages: total_pages,
       genres,
     };
   } catch (error) {

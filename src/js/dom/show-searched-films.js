@@ -4,16 +4,24 @@ import { createMarkup } from './show-all-films';
 //import filmCard from '../../templates/film-card';
 import { searchForm } from '../refs';
 
-export function showSearchedFilms(page) {
-  searchForm.addEventListener('submit', searchedFilms);
+let query = '';
 
-  function searchedFilms(e) {
-    e.preventDefault();
-    const query = e.target.elements.query.value;
-    const search = fetchBySearch(query, page);
+searchForm.addEventListener('submit', searchedFilms);
 
-    search.then(createMarkup);
-    searchForm.reset();
-  }
+function searchedFilms(e) {
+  e.preventDefault();
+  let page = 1;
+  query = e.target.elements.query.value;
+  const search = fetchBySearch(query, page);
+
+  search.then(createMarkup);
+  searchForm.reset();
 }
-showSearchedFilms(1);
+
+export function showSearchedFilms(page) {
+  const search = fetchBySearch(query, page);
+
+  search.then(createMarkup);
+}
+
+//showSearchedFilms(1);
