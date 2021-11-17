@@ -22,10 +22,10 @@ let lastPage = 1;
 let currentPage = homePage;
   
 // Пагинация по поисковому запросу
-// pagination(totalPages, showSearchedFilmsPagination);
+pagination(totalPages, showSearchedFilmsPagination);
 
 // Пагинация по умолчанию
-pagination(totalPages, showAllFilms);
+// pagination(totalPages, showAllFilms);
 // Как реализовать переключение с одной на вторую я не знаю
 
 // Реализация функционала

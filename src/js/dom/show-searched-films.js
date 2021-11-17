@@ -10,9 +10,9 @@ searchForm.addEventListener('submit', showSearchedFilms);
 function showSearchedFilms(e) {
   e.preventDefault();
   let page = 1;
-  let totalPages = 1;
-  totalPages = 10;
-
+  // let totalPages = 1;
+  // totalPages = 10;
+  
   query = e.target.elements.query.value;
   let search = getFetchBySearch(query, page);
   search.then(createMarkup);
