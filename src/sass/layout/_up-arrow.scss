@@ -20,13 +20,13 @@
   line-height: 0;
 }
 .upbtn__icon {
-  width: 20px;
-  height: 20px;
-  color: $black-color;
+  width: 10px;
+  height: 10px;
+  fill: $black-color;
   .upbtn_:hover &,
   .upbtn_:focus & {
-    color: $orange-color;
-    transition: color $cubic-bezier;
+    fill: $orange-color;
+    transition: fill $cubic-bezier;
   }
 }
 
