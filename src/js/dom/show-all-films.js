@@ -3,6 +3,8 @@ import { mainCardListEl } from '../refs';
 import filmCard from '../../templates/film-card.hbs';
 
 export function showAllFilms(page) {
+  localStorage.setItem('watchedActive', false)
+  localStorage.setItem('queueActive', false)
   fetchAllFilms(page).then(createMarkup).catch(alert);
 }
 

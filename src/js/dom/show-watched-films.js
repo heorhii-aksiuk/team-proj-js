@@ -3,9 +3,14 @@ import { mainCardListEl } from '../refs';
 import filmCard from '../../templates/film-card.hbs';
 
 const libraryWatchedBtn = document.querySelector('.library-watched-btn');
-libraryWatchedBtn.addEventListener('click', e => renderWatchedFilms());
+libraryWatchedBtn.addEventListener('click', e => {
+  localStorage.setItem('watchedActive', true)
+  localStorage.setItem('queueActive', false)
+  renderWatchedFilms();
+});
 
-function renderWatchedFilms() {
+export function renderWatchedFilms() {
+  
   let localStorageData = JSON.parse(localStorage.getItem('filmsWatched'));
   if (localStorageData === null || localStorageData.length === 0) {
     mainCardListEl.innerHTML = '<h1>Please, add watched films</h1>';
