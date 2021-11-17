@@ -17,3 +17,5 @@ export function createMarkup(data) {
   }));
   mainCardListEl.innerHTML = filmCard(filmsWithGenre);
 }
+
+showAllFilms(1);
