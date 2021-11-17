@@ -38,7 +38,7 @@ if () {
 // Это вызов функции пагинации для главной странички, принимает количество страниц, и функцию для отрисовки всего в дом
 // Функция по умолчанию, после реальизации проверки сверху, удалить от сюда
 pagination(totalPages, showAllFilms);
-pagination(totalPages, showSearchedFilms);
+
 // Реализация функционала
 
 function pagination(totalPages, showFilmsFunction) {
