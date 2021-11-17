@@ -13,7 +13,8 @@ import {
   nextPageBtnEl,
 } from '../refs';
 
-import { showAllFilms } from './show-all-films'
+import { showAllFilms } from './show-all-films';
+import { showSearchedFilms } from './show-searched-films';
 // Настройки для отрисовки фильмов по умолчанию
 let totalPages = 1000;
 // Настройки для стартовой страницы
@@ -37,7 +38,7 @@ if () {
 // Это вызов функции пагинации для главной странички, принимает количество страниц, и функцию для отрисовки всего в дом
 // Функция по умолчанию, после реальизации проверки сверху, удалить от сюда
 pagination(totalPages, showAllFilms);
-  
+pagination(totalPages, showSearchedFilms);
 // Реализация функционала
 
 function pagination(totalPages, showFilmsFunction) {
