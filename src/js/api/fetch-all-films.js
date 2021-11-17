@@ -3,16 +3,25 @@ import { API_KEY, BASE_URL } from './api-data';
 export async function fetchAllFilms(pageNumber) {
   const URLgenres = `${BASE_URL}/genre/movie/list?api_key=${API_KEY}`;
   const URL = `${BASE_URL}/trending/all/day?api_key=${API_KEY}&page=${pageNumber}`;
+  const error = 'Oops, something went wrong.';
 
-  const apifetchGenres = await fetch(URLgenres);
-  const responseGenres = await apifetchGenres.json();
-  const { genres } = responseGenres;
+  try {
+    const APIfetchGenres = await fetch(URLgenres);
+    const responseGenres = await APIfetchGenres.json();
+    const { genres } = responseGenres;
+    
+    const APIfetch = await fetch(URL);
+    if (+APIfetch.status === 404) throw Error(error);
 
-  const apifetch = await fetch(URL);
-  const response = await apifetch.json();
-  const { results } = response;
-  return {
-    films: results,
-    genres,
+    const response = await APIfetch.json();
+    const { results } = response;
+
+    return {
+      films: results,
+      genres,
+    };
+
+  } catch (error) {
+    alert(error)
   };
 }
