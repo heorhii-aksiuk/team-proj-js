@@ -1,12 +1,15 @@
 import { renderParamsCard } from '../api/fetch-info';
 import { mainCardListEl } from '../refs';
 import filmCard from '../../templates/film-card.hbs';
+import { addActiveColorLibraryWBtn, removeActiveColorLibraryQBtn } from '../dom/home-library-page-switch.js';
 
 const libraryWatchedBtn = document.querySelector('.library-watched-btn');
 libraryWatchedBtn.addEventListener('click', e => {
   localStorage.setItem('watchedActive', true)
   localStorage.setItem('queueActive', false)
   renderWatchedFilms();
+  addActiveColorLibraryWBtn();
+  removeActiveColorLibraryQBtn();
 });
 
 export function renderWatchedFilms() {
