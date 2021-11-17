@@ -5,6 +5,8 @@ import filmCard from '../../templates/film-card.hbs';
 const homePage = 1;
 
 export function showAllFilms(page) {
+  localStorage.setItem('watchedActive', false)
+  localStorage.setItem('queueActive', false)
   fetchAllFilms(page).then(createMarkup);
 }
 
