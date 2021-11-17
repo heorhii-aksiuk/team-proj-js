@@ -1,11 +1,12 @@
 import { fetchAllFilms } from '../api/fetch-all-films';
 import { mainCardListEl } from '../refs';
 import filmCard from '../../templates/film-card.hbs';
+import { showModalError } from './modal-error';
 
 const homePage = 1;
 
 export function showAllFilms(page) {
-  fetchAllFilms(page).then(createMarkup);
+  fetchAllFilms(page).then(createMarkup).catch(showModalError);
 }
 
 export function createMarkup(data) {

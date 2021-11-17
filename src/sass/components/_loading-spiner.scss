@@ -1,52 +1,52 @@
-.preloader {
-  background: rgba(255, 255, 255, 0.9);
-  //background-image: url(../images/header-img/header-library-tablet-img.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 777;
-  transition: 1000ms all;
-  opacity: 1;
-  visibility: visible;
-  &__loader {
-    width: 120px;
-    height: 120px;
-    border: 10px solid rgb(185, 185, 185);
-    border-radius: 50%;
-    border-top-color: #ff6b01;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: 800ms spin infinite linear;
-  }
-  &__percent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    color: #ff6b01;
-    font-size: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  &.done {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-@keyframes spin {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
+// .preloader {
+//   background: rgba(255, 255, 255, 0.9);
+//   //background-image: url(../images/header-img/header-library-tablet-img.jpg);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   width: 100%;
+//   height: 100%;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 777;
+//   transition: 1000ms all;
+//   opacity: 1;
+//   visibility: visible;
+//   &__loader {
+//     width: 120px;
+//     height: 120px;
+//     border: 10px solid rgb(185, 185, 185);
+//     border-radius: 50%;
+//     border-top-color: #ff6b01;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     animation: 800ms spin infinite linear;
+//   }
+//   &__percent {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: 50px;
+//     height: 50px;
+//     color: #ff6b01;
+//     font-size: 30px;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+//   &.done {
+//     opacity: 0;
+//     visibility: hidden;
+//   }
+// }
+// @keyframes spin {
+//   from {
+//     transform: translate(-50%, -50%) rotate(0deg);
+//   }
+//   to {
+//     transform: translate(-50%, -50%) rotate(360deg);
+//   }
+// }

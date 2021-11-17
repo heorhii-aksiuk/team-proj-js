@@ -32,3 +32,5 @@ function imageLoaded() {
     }, 500);
   }
 }
+
+preloader.classList.add('done');  
