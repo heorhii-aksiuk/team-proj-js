@@ -25,7 +25,8 @@ const refs = {
   addQueue: document.querySelector('.js-addQueue'),
   backdrop: document.querySelector('.backdrop'),
   modalFrame: document.querySelector('.modal-wrap'),
-  modalErrorEl: document.querySelector('.js-error-backdrop')
+  modalErrorEl: document.querySelector('.js-error-backdrop'),
+  errorCloseBtnEl: document.getElementById('error-close-btn')
 };
 
 export const {
@@ -56,4 +57,5 @@ export const {
   backdrop,
   modalFrame,
   modalErrorEl,
+  errorCloseBtnEl,
 } = refs;

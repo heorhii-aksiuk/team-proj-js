@@ -1,4 +1,5 @@
 import { API_KEY, BASE_URL } from './api-data';
+import { showModalError } from '../dom/modal-error';
 
 export default async function getFetchBySearch(query) {
   const endPoint = `/search/movie?api_key=${API_KEY}&query=${query}&page=2`;
@@ -18,6 +19,6 @@ export default async function getFetchBySearch(query) {
       genres,
     };
   } catch (error) {
-    return console.log(error);
+    return showModalError()
   }
 }

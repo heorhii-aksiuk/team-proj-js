@@ -1,10 +1,12 @@
 import { modalErrorEl } from "../refs";
+import { errorCloseBtnEl } from "../refs";
 
-export function  showModalError() {
+export function showModalError() {
+  modalErrorEl.classList.remove('hidden');
+  errorCloseBtnEl.addEventListener('click', closeModalError);
+}
 
-  let show = modalErrorEl.classList.remove('hidden');
-  let hidde = modalErrorEl.classList.add('hidden')
-  
-  setTimeout(show, 0);
-  setTimeout(hidde, 9000);
+function closeModalError() {
+  modalErrorEl.classList.add('hidden');
+  errorCloseBtnEl.removeEventListener('click', closeModalError);
 }
