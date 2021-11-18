@@ -30,6 +30,7 @@ const refs = {
   errorCloseBtnEl: document.getElementById('error-close-btn'),
   libraryWatchedBtn: document.querySelector('.library-watched-btn'),
   libraryQueueBtn: document.querySelector('.library-queue-btn'),
+  footerEl: document.querySelector('.footer')
 };
 
 export const {
@@ -64,4 +65,5 @@ export const {
   errorCloseBtnEl,
   libraryWatchedBtn,
   libraryQueueBtn,
+  footerEl,
 } = refs;
