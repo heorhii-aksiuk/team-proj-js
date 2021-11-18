@@ -24,7 +24,6 @@ function showSearchedFilms(e) {
   paginationHidde();
   localStorage.setItem('searching', 'true');
   searchForm.reset();
-  emptyQuery();
 }
 
 function onEntry(entries) {
