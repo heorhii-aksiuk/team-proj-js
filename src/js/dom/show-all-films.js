@@ -1,11 +1,12 @@
 import { fetchAllFilms } from '../api/fetch-all-films';
 import { mainCardListEl } from '../refs';
 import filmCard from '../../templates/film-card.hbs';
+import { showModalError } from './modal-error';
 
 export function showAllFilms(page) {
   localStorage.setItem('watchedActive', false)
   localStorage.setItem('queueActive', false)
-  fetchAllFilms(page).then(createMarkup).catch(alert);
+  fetchAllFilms(page).then(createMarkup).catch(showModalError);
 }
 
 export function createMarkup(data) {

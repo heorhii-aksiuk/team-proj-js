@@ -1,0 +1,28 @@
+.modal-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 140px;
+  padding: 30px;
+  overflow: auto;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0.95;
+  transition: transform $cubic-bezier;
+  background-color: $white-color;
+  border-radius: 4px;
+
+    &__header {
+      padding-bottom: 10px;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 1.17;
+      color: #000000;
+    }
+
+    &__text {
+      font-weight: 500;
+      color: $orange-color;
+    }
+  }
