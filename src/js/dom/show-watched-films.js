@@ -1,7 +1,9 @@
 import { renderParamsCard } from '../api/fetch-info';
 import { mainCardListEl } from '../refs';
 import filmCard from '../../templates/film-card.hbs';
+import {libraryBtnEl } from '../refs';
 
+libraryBtnEl.addEventListener('click', e => renderWatchedFilms());
 const libraryWatchedBtn = document.querySelector('.library-watched-btn');
 libraryWatchedBtn.addEventListener('click', e => renderWatchedFilms());
 
