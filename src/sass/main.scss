@@ -5,7 +5,6 @@
 @import './base/common';
 @import './base/container';
 
-@import './components/button';
 @import './components/film-card';
 @import './components/pagination';
 @import './components/backdrop';
@@ -16,7 +15,12 @@
 @import './layout/header';
 @import './layout/main-section';
 @import './layout/footer';
-@import './layout/modal-film-info';
 
+@import './layout/modal-film-info';
+@import './layout/modal-error';
+
+
+
+@import './layout/up-arrow';
 
 

@@ -25,6 +25,10 @@ const refs = {
   addQueue: document.querySelector('.js-addQueue'),
   backdrop: document.querySelector('.backdrop'),
   modalFrame: document.querySelector('.modal-wrap'),
+  modalErrorEl: document.querySelector('.js-error-backdrop'),
+  errorCloseBtnEl: document.getElementById('error-close-btn'),
+  libraryWatchedBtn: document.querySelector('.library-watched-btn'),
+  libraryQueueBtn: document.querySelector('.library-queue-btn'),
 };
 
 export const {
@@ -54,4 +58,8 @@ export const {
   addQueue,
   backdrop,
   modalFrame,
+  modalErrorEl,
+  errorCloseBtnEl,
+  libraryWatchedBtn,
+  libraryQueueBtn,
 } = refs;
