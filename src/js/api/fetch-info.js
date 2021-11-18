@@ -9,10 +9,12 @@ export async function renderParamsCard(id) {
   
   try {
     const APIfetch = await fetch(REQUEST_ADRESS);
+
     if (+APIfetch.status === 404) throw Error(error);
     
     const response = await APIfetch.json();
     return response;
+
   } catch (error) {
     showModalError()
   }
