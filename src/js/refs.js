@@ -25,6 +25,8 @@ const refs = {
   addQueue: document.querySelector('.js-addQueue'),
   backdrop: document.querySelector('.backdrop'),
   modalFrame: document.querySelector('.modal-wrap'),
+  libraryWatchedBtn: document.querySelector('.library-watched-btn'),
+  libraryQueueBtn: document.querySelector('.library-queue-btn'),
 };
 
 export const {
@@ -54,4 +56,6 @@ export const {
   addQueue,
   backdrop,
   modalFrame,
+  libraryWatchedBtn,
+  libraryQueueBtn,
 } = refs;

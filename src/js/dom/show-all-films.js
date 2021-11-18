@@ -2,10 +2,10 @@ import { fetchAllFilms } from '../api/fetch-all-films';
 import { mainCardListEl } from '../refs';
 import filmCard from '../../templates/film-card.hbs';
 
-const homePage = 1;
-
 export function showAllFilms(page) {
-  fetchAllFilms(page).then(createMarkup);
+  localStorage.setItem('watchedActive', false)
+  localStorage.setItem('queueActive', false)
+  fetchAllFilms(page).then(createMarkup).catch(alert);
 }
 
 export function createMarkup(data) {
@@ -20,4 +20,4 @@ export function createMarkup(data) {
   mainCardListEl.innerHTML = filmCard(filmsWithGenre);
 }
 
-showAllFilms(homePage);
+showAllFilms(1);
