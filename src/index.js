@@ -12,6 +12,7 @@ import './js/storage/add-to-watched';
 import './js/storage/add-to-queue';
 import './js/dom/show-watched-films';
 import './js/dom/show-queue-films';
-import './js/dom/modal-error'
+import './js/storage/dark-theme-ls';
+import './js/dom/modal-error';
 
 

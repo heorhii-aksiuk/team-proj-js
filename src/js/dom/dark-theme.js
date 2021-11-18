@@ -1,4 +1,5 @@
 import '../../templates/film-card.hbs';
+import '../../templates/film-info.hbs';
 
 const bodyRef = document.querySelector('body');
 const toggleRef = document.querySelector('#theme-switch-toggle');
