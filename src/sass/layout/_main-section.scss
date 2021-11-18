@@ -8,11 +8,14 @@
       // justify-content: center;
     }
   }
-  &__item {
+   
     @media screen and (max-width: $phone-max-size) {
+    
+    &__item:not(:last-child) {
       margin-bottom: 20px;
     } 
   }
+  
   @media screen and (min-width: $tablet-min-size) and (max-width: $tablet-max-size) {
     &__item:not(:last-child) {
       margin-bottom: 30px;
@@ -39,7 +42,12 @@
   }
 }
 
-
+.when-hide-pagination {
+  padding-bottom: 20px;
+  @media screen and (min-width: $tablet-min-size) {
+    padding-bottom: 60px;
+  }
+  }
 
 // Pagination
 
