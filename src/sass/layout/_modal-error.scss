@@ -12,6 +12,10 @@
   transition: transform $cubic-bezier;
   background-color: $white-color;
   border-radius: 4px;
+  box-shadow: $shadow-btn;
+  @media screen and (min-width: $tablet-min-size) {
+    width: 310px;
+  }
 
     &__header {
       padding-bottom: 10px;
@@ -26,5 +30,8 @@
       letter-spacing: 2px;
       font-weight: 500;
       color: $orange-color;
+      @media screen and (min-width: $tablet-min-size) {
+        font-size: 16px;
+      }
     }
   }
