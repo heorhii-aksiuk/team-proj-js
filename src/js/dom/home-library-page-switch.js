@@ -1,5 +1,7 @@
 import { headerEl, homeBtnEl, libraryBtnEl, libraryWatchedBtn, libraryQueueBtn } from '../refs';
-import { showAllFilms } from './show-all-films'
+import { showAllFilms } from './show-all-films';
+import { paginationHidde, paginationShow } from './pagination'
+
 
 
 homeBtnEl.addEventListener('click', showHomePage);
@@ -8,6 +10,7 @@ libraryBtnEl.addEventListener('click', showLibraryPage);
 function showHomePage() {
   headerEl.classList.add('header-home');
   headerEl.classList.remove('header-library');
+  paginationShow()
   showAllFilms(1)
 }
 
@@ -15,6 +18,7 @@ function showLibraryPage() {
   headerEl.classList.add('header-library');
   headerEl.classList.remove('header-home');
   addActiveColorLibraryWBtn();
+  paginationHidde();
 }
 export function addActiveColorLibraryWBtn() {
   libraryWatchedBtn.classList.add('button__active');

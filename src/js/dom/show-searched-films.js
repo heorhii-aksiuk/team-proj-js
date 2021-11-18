@@ -2,6 +2,7 @@ import getFetchBySearch from '../api/fetch-by-search';
 import { createMarkup } from './show-all-films';
 import { showModalError } from './modal-error';
 import { searchForm } from '../refs';
+import { paginationHidde, paginationShow } from './pagination';
 
 searchForm.addEventListener('submit', showSearchedFilms);
 
@@ -10,5 +11,5 @@ function showSearchedFilms(e) {
   const query = e.target.elements.query.value;
   const search = getFetchBySearch(query);
   search.then(createMarkup).catch(showModalError);
-  searchForm.reset();
+  paginationHidde();
 }
