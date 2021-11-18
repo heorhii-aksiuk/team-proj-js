@@ -16,7 +16,7 @@ function forArrayImg(data) {
     const imageClone = new Image();
     imageClone.onload = imageLoaded;
     imageClone.onerror = imageLoaded;
-    imageClone.src = images[i].poster_path;
+    imageClone.src = 'https://www.themoviedb.org/t/p/w500/' + images[i].poster_path;
   }
 }
 
