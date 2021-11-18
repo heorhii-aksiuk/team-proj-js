@@ -18,7 +18,10 @@ function showLibraryPage() {
   headerEl.classList.add('header-library');
   headerEl.classList.remove('header-home');
   localStorage.setItem('searching', false);
+  localStorage.setItem('watchedActive', true)
+  localStorage.setItem('queueActive', false)
   addActiveColorLibraryWBtn();
+  removeActiveColorLibraryQBtn()
   paginationHidde();
 }
 export function addActiveColorLibraryWBtn() {
