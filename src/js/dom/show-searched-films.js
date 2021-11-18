@@ -40,7 +40,6 @@ function onEntry(entries) {
 
 function showNextPage() {
   page += 1;
-  console.log(page);
   const search = getFetchBySearch(query, page);
   search.then(createMarkup);
 }
