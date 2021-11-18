@@ -1,121 +1,65 @@
 .footer {
   width: 100%;
-  background: #f7f7f7;
-
+  background: $grey-footer-color;
   &__container {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-weight: 400;
     color: $grey-color;
-  }
-
-  &__button {
-    border: 0px;
-    background-color: #54545400;
-    color: $grey-color;
-    cursor: pointer;
-  }
-
-  &__button:focus,
-  &__button:hover {
-    color: $black-color;
-    transition: color $cubic-bezier;
-  }
-}
-
-.developed {
-  margin-right: 10px;
-}
-
-.students {
-  position: relative;
-  margin-left: 10px;
-}
-
-.underline::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  display: block;
-  width: 83%;
-  height: 0.5px;
-  background-color: $grey-color;
-  border-radius: 2px;
-
-  &:hover,
-  &:focus {
-    color: $black-color;
-    transition: color $cubic-bezier;
-  }
-}
-
-@media screen and (max-width: $phone-max-size) {
-  .footer {
-    height: 100px;
-
-    &__container {
-      font-size: 14px;
-      line-height: 1.14;
-    }
-
-    &__copyright {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top: 29px;
-      margin-bottom: 10px;
-    }
-
-    &__developed {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-bottom: 30px;
-    }
-
-    &__heart-icon {
-      width: 14px;
-      height: 12.75px;
-    }
-  }
-
-  .heart-icon {
-    width: 14px;
-    height: 12.75px;
-  }
-}
-
-@media screen and (min-width: $tablet-min-size) {
-  .footer {
-    height: 77px;
-
-    &__container {
-      font-size: 16px;
-      line-height: 1.19;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    font-size: 14px;
+    line-height: 1.14;
+    
+    @media screen and (min-width: $tablet-min-size) {
+      height: 77px;
       padding-top: 30px;
       padding-bottom: 28px;
+      flex-direction: row;
+      font-size: 16px;
+      line-height: 1.19;
     }
-
-    &__copyright {
+  }
+  &__button {
+    padding: 0;
+    border: 0px;
+    background-color: $grey-footer-color;
+    color: $grey-color;
+    cursor: pointer;
+    border-bottom: 1px solid $grey-color;
+  }
+  &__button:focus,
+  &__button:hover {
+    color: $orange-color;
+    border-bottom: 1px solid $orange-color; 
+    transition: color $cubic-bezier;
+  }
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    @media screen and (min-width: $tablet-min-size) {
       margin-right: 3px;
-    }
-
-    &__developed {
+      margin-bottom: 0;
+  }
+  }
+  &__developed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width: $tablet-min-size) {
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    &__heart-icon {
+  }
+  }
+  &__heart-icon {
+    margin: 0 10px 0 10px;
+    width: 14px;
+    height: 12.75px;
+    @media screen and (min-width: $tablet-min-size) {
       width: 14px;
       height: 12.88px;
-    }
   }
-
-  .heart-icon {
-    width: 14px;
-    height: 12.88px;
   }
 }

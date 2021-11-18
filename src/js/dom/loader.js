@@ -6,7 +6,7 @@ let imagesTotalCount;
 
 let page = 1;
 
-fetchAllFilms(page).then(forArrayImg);
+fetchAllFilms(page).then(forArrayImg).catch(hideLoader);
 
 function forArrayImg(data) {
   const images = data.films;
@@ -31,4 +31,8 @@ function imageLoaded() {
       }
     }, 500);
   }
+}
+
+function hideLoader() {
+  preloader.classList.add('done');
 }

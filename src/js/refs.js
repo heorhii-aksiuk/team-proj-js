@@ -7,6 +7,7 @@ const refs = {
   libraryBtnEl: document.querySelector('.library-button'),
   searchFormEl: document.querySelector('.search-form'),
   libraryMenuEl: document.querySelector('.library-menu'),
+  paginationEl: document.querySelector('.pagination'),
   paginationListEl: document.querySelector('.pagination__list'),
   previousPageBtnEl: document.getElementById('previous-page-btn'),
   firstPageBtnEl: document.getElementById('first-page-btn'),
@@ -21,6 +22,14 @@ const refs = {
   nextPageBtnEl: document.getElementById('next-page-btn'),
   preloader: document.getElementById('preloader-page'),
   percentDisplay: document.getElementById('loading-percent'),
+  addWatched: document.querySelector('.js-addWatched'),
+  addQueue: document.querySelector('.js-addQueue'),
+  backdrop: document.querySelector('.backdrop'),
+  modalFrame: document.querySelector('.modal-wrap'),
+  modalErrorEl: document.querySelector('.js-error-backdrop'),
+  errorCloseBtnEl: document.getElementById('error-close-btn'),
+  libraryWatchedBtn: document.querySelector('.library-watched-btn'),
+  libraryQueueBtn: document.querySelector('.library-queue-btn'),
 };
 
 export const {
@@ -33,6 +42,7 @@ export const {
   searchForm,
   searchFormEl,
   libraryMenuEl,
+  paginationEl,
   previousPageBtnEl,
   firstPageBtnEl,
   previousDotsLiEl,
@@ -46,5 +56,12 @@ export const {
   nextPageBtnEl,
   preloader,
   percentDisplay,
-
+  addWatched,
+  addQueue,
+  backdrop,
+  modalFrame,
+  modalErrorEl,
+  errorCloseBtnEl,
+  libraryWatchedBtn,
+  libraryQueueBtn,
 } = refs;

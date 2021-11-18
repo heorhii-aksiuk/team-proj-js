@@ -1,11 +1,16 @@
-.backdrop{
+.backdrop {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.2);;
-    z-index: 100;
-  
-    transition: opacity 250ms linear, visibility 250ms linear;
+    width: 100%;
+    height: 100%;
+    background-color: $backdrop-bg-color;
+    opacity: 1;
+    z-index: 1000;
+    transition: visibility $cubic-bezier, opacity $cubic-bezier;
+  }
+  .backdrop_hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
   }

@@ -1,4 +1,5 @@
 import {
+  paginationEl,
   paginationListEl,
   previousPageBtnEl,
   firstPageBtnEl,
@@ -14,31 +15,13 @@ import {
 } from '../refs';
 
 import { showAllFilms } from './show-all-films'
-// Настройки для отрисовки фильмов по умолчанию
+
 let totalPages = 1000;
-// Настройки для стартовой страницы
 const homePage = 1;
 let lastPage = 1;
 let currentPage = homePage;
 
-// Функция, которая будет подключать пагинацию к страничке на которой находится пользователь
-/* // В условия проверка на какой страничке находится пользователь
-if () {
-// функция для пагинации поискового запроса
-} else if () {
-  // функция для пагинации watched
-} else if (){
-// функция для пагинации queue
-} else {
-// функция для пагинации главной странички
-  pagination(totalPages, showAllFilms);
-} */
-
-// Это вызов функции пагинации для главной странички, принимает количество страниц, и функцию для отрисовки всего в дом
-// Функция по умолчанию, после реальизации проверки сверху, удалить от сюда
-pagination(totalPages, showAllFilms);
-  
-// Реализация функционала
+pagination(totalPages, showAllFilms); 
 
 function pagination(totalPages, showFilmsFunction) {
   lastPage = totalPages;
@@ -155,4 +138,14 @@ function hiddeMinusButtons() {
   if (minusOneBtnEl.textContent < 1) minusOneBtnEl.classList.add('content-hidden');
   if (minusTwoBtnEl.textContent > 0) minusTwoBtnEl.classList.remove('content-hidden');
   if (minusOneBtnEl.textContent > 0) minusOneBtnEl.classList.remove('content-hidden');
+}
+
+export function paginationHidde() {
+  paginationEl.classList.add('hidden')
+}
+
+export function paginationShow() {
+  currentPage = 1;
+  startPaginationSetup();
+  paginationEl.classList.remove('hidden');
 }
