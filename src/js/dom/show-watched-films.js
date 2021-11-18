@@ -19,7 +19,8 @@ export function renderWatchedFilms() {
   
   let localStorageData = JSON.parse(localStorage.getItem('filmsWatched'));
   if (localStorageData === null || localStorageData.length === 0) {
-    mainCardListEl.innerHTML = '<h1>Please, add watched films</h1>';
+    mainCardListEl.innerHTML =
+      '<p style="margin:0 auto; padding-bottom:300px">The list is empty. Please, add watched films</p>';
   } else {
     mainCardListEl.innerHTML = ''
     localStorageData.forEach(e => {

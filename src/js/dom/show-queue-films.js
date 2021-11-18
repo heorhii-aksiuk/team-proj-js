@@ -16,7 +16,8 @@ libraryQueueBtn.addEventListener('click', e => {
 export function renderQueueFilms() {
   let localStorageData = JSON.parse(localStorage.getItem('filmsQueue'));
   if (localStorageData === null || localStorageData.length === 0) {
-    mainCardListEl.innerHTML = '<h1>Please, add queue films</h1>';
+    mainCardListEl.innerHTML =
+      '<p style="margin:0 auto; padding-bottom:300px">The list is empty. Please, add queue films</p>';
   } else {
     mainCardListEl.innerHTML = ''
     localStorageData.forEach(e => {
