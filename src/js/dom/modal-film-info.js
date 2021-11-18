@@ -48,13 +48,13 @@ export function modalClose() {
   modalFrame.innerHTML = '';
 }
 
-function backdropClick(e) {
+export function backdropClick(e) {
   if (e.currentTarget === e.target) {
     modalClose();
   }
 }
 
-function modalCloseByEsc(e) {
+export function modalCloseByEsc(e) {
   if (e.code === 'Escape') {
     modalClose();
   }
