@@ -42,7 +42,12 @@ body.dark-theme {
     & .film-info-frame,
     & .close-btn {
         background-color: $grey-color;
+        color: $dark-text-color;
         fill: $dark-text-color;
+    }
+    & .close-btn:hover,
+    & .close-btn:focus {
+        fill: $dark-orange-color;
     }
     & .modal-btn {
         background-color: $dark-main-bg-color;
