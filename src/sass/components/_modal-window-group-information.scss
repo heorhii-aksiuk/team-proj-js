@@ -1,6 +1,37 @@
+// .close-btn{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   position: absolute;
+//   top: 8px;
+//   right: 8px;
+
+//   height: 30px;
+//   width: 30px;
+//   border-radius: 50%;
+//   border: 1px solid rgba(0, 0, 0, 0.1);;
+//   background-color: transparent;
+
+//   transition-duration: 250ms;
+//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+//   &_icon{
+//       width: 16px;
+//       height: 16px;
+//   }
+
+//   &:hover, &:focus{
+//       fill: #FF6B08;
+//       cursor: pointer;
+//       transition-duration: 250ms;
+//       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//   }
+// }
+
+
 .modal-window-group-information{
-    min-width: 882px; 
-    min-height: 609px;
+    // min-height: 609px;
     background-color: rgba(255, 255, 255, 1);
     position: absolute;
     top: 50%;
@@ -9,4 +40,93 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px; 
     padding: 40px;
+   background: radial-gradient($white-color, $orange-color);
+  }
+
+
+  .group{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    
+    &_item{
+      width: 75px;
+      margin-top: 10px;
+      text-align: center;
+      margin-left: 5px;
+    }
+  }
+  
+  .foto_item{
+    width: 200px;
+    height: 60px;
+    margin-bottom: 5px;
+    border-radius: 10%;
+    max-height: 200px;
+  }
+
+  .participant_info  {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.2;
+
+    &_role{
+      color: #FF6B08;
+    }
+    &_name{
+      text-transform: uppercase;
+    }
+  }
+
+  .git_icon{
+    width: 15px;
+    height: 15px;
+    margin-top: 3px;
+    
+    &:hover, &:focus{
+      fill: #FF6B08;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+  @media screen and (min-width: $tablet-min-size){
+    .group{
+      justify-content: space-between;
+    }
+    .group_item{
+      width: 100px;
+      margin-left: 22px;
+    }
+    .participant_info{
+      font-size: 14px;
+    }
+    .foto_item{
+      height: 100px;
+    }
+    .git_icon{
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-min-size){
+    .group_item{
+      width: 120px;
+    }
+    .participant_info{
+      font-size: 14px;
+    }
+    .foto_item{
+      width: 120px;
+      height: 120px;
+    }
+    .git_icon{
+      width: 25px;
+      height: 25px;
+    }
+    .modal-window-group-information{
+      width: 882px;
+    }
   }
