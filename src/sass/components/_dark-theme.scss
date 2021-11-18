@@ -1,42 +1,64 @@
 //======Main, footer style======//
 body.dark-theme {
-    background-color: #333333;
-    color: $white-color;  
-    & .card__title {
-        font-style: normal;
-        font-size: 12px;
-        line-height: 16px;
-        color: $white-color;
+    background-color: $dark-main-bg-color;
+    & .card__title,
+    & .footer__copyright,
+    & .footer__developed,
+    & .footer__copyright,
+    & .footer__developed,
+    & .pagination__btn {
+        color: $dark-text-color;
     }
     & .card__text {
-        color: $orange-color;
+        color: $dark-orange-color;
     }
-    & .pagination__btn {
-        color: $white-color;
-    }
-    & .pagination__btn {
-        fill: $orange-color;
+    & .pagination__btn-active,
+    & .next-dots-btn {
+        background-color: $dark-orange-color;
     }
     & .pagination__btn-arrows {
-        background-color: #141414;
+        background-color: $dark-footer-bg-color;
+        border: 1px solid $grey-color;
     }
-    & .footer {
-        background-color: #141414;
+    & .pagination__svg {
+        fill: $dark-orange-color;
     }
-    & .footer__copyright {
-        color: $white-color;
+    & .footer{
+        border-top: 0.1px solid $grey-color;
     }
-    & .footer__developed {
-        color: $white-color;
+    & .footer,
+    & .footer__button {
+        color: $dark-text-color;
+        background-color: $dark-footer-bg-color;
     }
     & .footer__button {
-        color: $white-color;
-        background-color: $orange-color;
+        color: $dark-text-color;
+        background-color: $dark-footer-bg-color;
     }
     & .card__rating {
-        background-color: #ff6b08;
-        color: #ffffff;
+        background-color: $dark-orange-color;
+        color: $white-color;
     }
+    & .film-info-frame,
+    & .close-btn {
+        background-color: $grey-color;
+        fill: $dark-text-color;
+    }
+    & .modal-btn {
+        background-color: $dark-main-bg-color;
+        color: $dark-text-color;
+        border-color: $dark-text-color;
+    }
+    & .modal-btn:hover,
+    & .modal-btn:focus {
+        background-color: $dark-main-bg-color;
+        color: $dark-orange-color;
+        border-color: $dark-orange-color
+    }
+    & .upbtn__icon{
+        fill: $grey-color;
+    }
+
 }
 
 //======Switcher======//
@@ -48,14 +70,12 @@ body.dark-theme {
     right: 0;
     top: 180px;
 }
-
 .theme-switch {
     display: flex;
     align-items: center;
-}
-  
+} 
 .theme-switch__icon {
-    color: $white-color;
+    color: $dark-text-color;
     height: 15px;
     width: 15px;
     margin-right: 8px;
@@ -71,8 +91,7 @@ body.dark-theme {
     height: 16px;
     border-radius: 50em;
     padding: 3px 0;
-}
-  
+}  
 .theme-switch__toggle {
     position: absolute;
     left: 0;
@@ -84,7 +103,6 @@ body.dark-theme {
     width: 0;
     pointer-events: none;
 }
-  
 .theme-switch__track {
     position: absolute;
     left: 0;
@@ -107,13 +125,13 @@ body.dark-theme {
     border-radius: 50%;
     z-index: 2;
     pointer-events: none;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 1px $backdrop-bg-color;
     transform: translateX(3px);
-    transition: transform 250ms cubic-bezier(0.6, 0, 0.3, 1);
+    transition: transform $cubic-bezier;
 }
   
 .theme-switch__toggle:checked + .theme-switch__track {
-    background-color: $orange-color;
+    background-color: $dark-orange-color;
 }
   
 .theme-switch__toggle:checked ~ .theme-switch__marker {
@@ -122,9 +140,5 @@ body.dark-theme {
   
 .theme-switch__toggle:focus + .theme-switch__track,
 .theme-switch__toggle:active + .theme-switch__track {
-    box-shadow: 0 0 0 2px $orange-color;
-}
-.dark-theme {
-    color: lightgrey;
-    background-color: #222;
+    box-shadow: 0 0 0 2px $dark-orange-color;
 }
