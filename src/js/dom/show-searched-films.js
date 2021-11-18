@@ -1,8 +1,6 @@
 import getFetchBySearch from '../api/fetch-by-search';
 import { createMarkup } from './show-all-films';
 import { showModalError } from './modal-error';
-
-//import filmCard from '../../templates/film-card';
 import { searchForm } from '../refs';
 
 searchForm.addEventListener('submit', showSearchedFilms);

@@ -4,7 +4,6 @@ import { showModalError } from '../dom/modal-error';
 export async function fetchAllFilms(pageNumber) {
   const URLgenres = `${BASE_URL}/genre/movie/list?api_key=${API_KEY}`;
   const URL = `${BASE_URL}/trending/all/day?api_key=${API_KEY}&page=${pageNumber}`;
-  const error = 'Oops, something went wrong.';
 
   try {
     const APIfetchGenres = await fetch(URLgenres);
@@ -12,7 +11,7 @@ export async function fetchAllFilms(pageNumber) {
     const { genres } = responseGenres;
     
     const APIfetch = await fetch(URL);
-    if (+APIfetch.status === 404) throw Error(error);
+    if (+APIfetch.status === 404) throw Error;
 
     const response = await APIfetch.json();
     const { results } = response;
@@ -22,7 +21,7 @@ export async function fetchAllFilms(pageNumber) {
       genres,
     };
 
-  } catch (error) {
+  } catch {
     showModalError()
   };
 }

@@ -18,7 +18,7 @@ export default async function getFetchBySearch(query) {
       films: results,
       genres,
     };
-  } catch (error) {
+  } catch {
     return showModalError()
   }
 }
