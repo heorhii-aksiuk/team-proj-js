@@ -5,6 +5,7 @@ import './js/dom/show-searched-films';
 import './js/dom/home-library-page-switch';
 import './js/dom/modal-group-info';
 import './js/dom/loader';
+import './js/dom/up-arrow';
 import './js/dom/modal-film-info';
 import './js/dom/dark-theme';
 import './js/storage/add-to-watched';

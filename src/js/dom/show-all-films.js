@@ -3,9 +3,9 @@ import { mainCardListEl } from '../refs';
 import filmCard from '../../templates/film-card.hbs';
 import { showModalError } from './modal-error';
 
-const homePage = 1;
-
 export function showAllFilms(page) {
+  localStorage.setItem('watchedActive', false)
+  localStorage.setItem('queueActive', false)
   fetchAllFilms(page).then(createMarkup).catch(showModalError);
 }
 
@@ -21,4 +21,4 @@ export function createMarkup(data) {
   mainCardListEl.innerHTML = filmCard(filmsWithGenre);
 }
 
-showAllFilms(homePage);
+showAllFilms(1);
