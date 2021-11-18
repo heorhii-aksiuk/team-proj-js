@@ -63,7 +63,12 @@ body.dark-theme {
     & .upbtn__icon{
         fill: $grey-color;
     }
-
+    & .modal-error,
+    & .modal-error__header,
+    & .modal-error .close-btn {
+        color: $dark-text-color;
+        background-color: $dark-main-bg-color;
+    }
 }
 
 //======Switcher======//
