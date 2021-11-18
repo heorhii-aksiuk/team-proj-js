@@ -1,6 +1,7 @@
 import { renderParamsCard } from '../api/fetch-info';
 import { mainCardListEl } from '../refs';
 import filmCard from '../../templates/film-card.hbs';
+import { showModalError } from './modal-error';
 import {libraryBtnEl } from '../refs';
 import { addActiveColorLibraryWBtn, removeActiveColorLibraryQBtn } from '../dom/home-library-page-switch.js';
 
@@ -24,12 +25,10 @@ export function renderWatchedFilms() {
     localStorageData.forEach(e => {
       renderParamsCard(e)
         .then(data => {
-            const dataObj = {...data,
-            year: new Date(data.release_date).getFullYear(),
-            }
+          const dataObj = { ...data, year: new Date(data.release_date).getFullYear() };
           mainCardListEl.insertAdjacentHTML('beforeend', filmCard([dataObj]));
         })
-        .catch(() => {});
+        .catch(showModalError);
     });
 
   }
