@@ -1,9 +1,11 @@
 import { renderParamsCard } from '../api/fetch-info';
 import filmCard from '../../templates/film-info.hbs';
-import { backdrop, modalFrame, mainCardListEl, bodyEl } from '../refs';
+import { backdrop, modalFrame, mainCardListEl, bodyEl, modalErrorEl } from '../refs';
 import { toggleToWatched } from '../storage/add-to-watched.js';
 import { toggleToQueue } from '../storage/add-to-queue.js';
 import { monitorButtonStatusText } from '../storage/button-status-text.js';
+
+import { showModalError } from './modal-error'
 
 let id = 'id';
 
@@ -20,7 +22,7 @@ function renderMovieSearchParam(id) {
 
       addQueue.addEventListener('click', e => toggleToQueue(data.id));
     })
-    .catch(() => {});
+    .catch(showModalError);
 }
 
 mainCardListEl.addEventListener('click', e => {
@@ -38,7 +40,7 @@ mainCardListEl.addEventListener('click', e => {
   closeByButton();
 });
 
-function modalClose() {
+export function modalClose() {
   window.removeEventListener('keydown', modalCloseByEsc);
   backdrop.removeEventListener('click', backdropClick);
   backdrop.classList.add('hidden');

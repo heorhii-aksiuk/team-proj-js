@@ -1,4 +1,5 @@
 import { API_KEY, BASE_URL } from './api-data';
+import { showModalError } from '../dom/modal-error';
 
 export async function fetchAllFilms(pageNumber) {
   const URLgenres = `${BASE_URL}/genre/movie/list?api_key=${API_KEY}`;
@@ -22,6 +23,6 @@ export async function fetchAllFilms(pageNumber) {
     };
 
   } catch (error) {
-    alert(error)
+    showModalError()
   };
 }
