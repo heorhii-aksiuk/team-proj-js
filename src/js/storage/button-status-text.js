@@ -14,8 +14,6 @@ export function monitorButtonStatusText(keyStorage, id) {
       addWatched.style.backgroundColor = filmFromWatched ? '#FF6B08' : 'white';
       addWatched.style.color = 'black';
       addWatched.style.borderColor = filmFromWatched ? '#FF6B08' : 'black'
-      
-      
       break;
     case 'filmsQueue':
       addQueue.innerText = filmFromQueue ? 'Delete from queue' : 'Add to queue';

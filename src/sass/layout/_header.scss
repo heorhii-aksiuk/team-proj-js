@@ -41,9 +41,9 @@
       background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
         url(../images/header-img/1024px-head-home@2x.jpg);
     }
-        // animation-name: changeOpacityH;
-        // animation-duration: 800ms;
-        // animation-fill-mode: forwards;
+        animation-name: changeOpacityH;
+        animation-duration: 800ms;
+        animation-fill-mode: forwards;
 }
 .header-library {
   background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
@@ -74,9 +74,9 @@
       background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
         url(../images/header-img/1024px-head-library@2x.jpg);
     }
-  // animation-name: changeOpacityL;
-  // animation-duration: 800ms;
-  // animation-fill-mode: forwards;
+  animation-name: changeOpacityL;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
 }
 
 .header-home .library-menu,
@@ -183,7 +183,7 @@
     padding: 0;
     border: none;
     outline: none;
-    background: inherit;
+    background: transparent;
     cursor: pointer;
   }
 
@@ -199,39 +199,63 @@
 }
 
 .library-menu {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
   margin-top: 49px;
+  text-align: center;
+  @media screen and (min-width: $tablet-min-size) {
+    display: block;
+  }
 }
 
-.library-menu button {
+.button {
+  width: 129.53px;
+  height: 44px;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.33;
   text-align: center;
   text-transform: uppercase;
-
   color: $white-color;
-  background-color: inherit;
+  background: transparent;
   border: 1px solid $white-color;
+  border-radius: 5px;
+  cursor: pointer;
+  @media screen and (min-width: $tablet-min-size) {
+    width: 136px;
+  }
+  &:hover,
+  :focus {
+    border: 1px solid $orange-color;
+    background: $orange-color;
+    box-shadow: $shadow-btn;
+    transition: background-color $cubic-bezier;
+  }
+  &:not(:last-child) {
+    @media screen and (min-width: $tablet-min-size) {
+      margin-right: 15px;
+    }
+    }
+  &__active {
+    border: 1px solid $orange-color;
+    background: $orange-color;
+    box-shadow: $shadow-btn;
+  }
 }
 
-.library-menu button:not(:last-child) {
-  margin-right: 15px;
+@keyframes changeOpacityH {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-// @keyframes changeOpacityH {
-//   0% {
-//     opacity: 0.8;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
-// @keyframes changeOpacityL {
-//   0% {
-//     opacity: 0.8;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+@keyframes changeOpacityL {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
