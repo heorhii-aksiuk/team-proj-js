@@ -17,6 +17,7 @@ function showHomePage() {
 function showLibraryPage() {
   headerEl.classList.add('header-library');
   headerEl.classList.remove('header-home');
+  localStorage.setItem('searching', false);
   addActiveColorLibraryWBtn();
   paginationHidde();
 }
