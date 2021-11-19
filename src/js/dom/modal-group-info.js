@@ -10,5 +10,6 @@
   
     function toggleModal() {
       refs.modal.classList.toggle('hidden');
+      document.body.classList.toggle('modal-open');
     }
   })();

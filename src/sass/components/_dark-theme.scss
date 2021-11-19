@@ -6,7 +6,8 @@ body.dark-theme {
     & .footer__developed,
     & .footer__copyright,
     & .footer__developed,
-    & .pagination__btn {
+    & .pagination__btn,
+    & .participant-info__name {
         color: $dark-text-color;
     }
     & .card__text {
@@ -69,10 +70,17 @@ body.dark-theme {
     }
     & .modal-error,
     & .modal-error__header,
-    & .modal-error .close-btn {
+    & .modal-error .close-btn,
+    & .modal-window-group-information .close-btn,
+    & .modal-window-group-information {
         color: $dark-text-color;
         background-color: $dark-main-bg-color;
     }
+    & .team-name {
+        color: $white-color;
+        -webkit-text-stroke-width: 0px;
+    }
+
 }
 
 //======Switcher======//

@@ -1,6 +1,6 @@
 import { renderParamsCard } from '../api/fetch-info';
 import filmCard from '../../templates/film-info.hbs';
-import { backdrop, modalFrame, mainCardListEl, bodyEl } from '../refs';
+import { backdrop, modalFrame, mainCardListEl, bodyEl, modalCloseBtn } from '../refs';
 import { toggleToWatched } from '../storage/add-to-watched.js';
 import { toggleToQueue } from '../storage/add-to-queue.js';
 import { monitorButtonStatusText } from '../storage/button-status-text.js';
@@ -61,6 +61,5 @@ function modalCloseByEsc(e) {
 }
 
 function closeByButton() {
-  const modalCloseBtn = document.querySelector('.close-btn');
   modalCloseBtn.addEventListener('click', modalClose);
 }
