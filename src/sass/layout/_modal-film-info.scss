@@ -138,8 +138,7 @@ font-weight: 500;
   cursor: pointer;
   border: 1px solid $black-color;
   transition: all $cubic-bezier;
-  &:hover,
-  &:focus {
+  &:hover {
     color: $white-color;
     background-color: $orange-color;
     border: 1px solid $orange-color;
