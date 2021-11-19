@@ -22,7 +22,7 @@ function forArrayImg(data) {
 
 function imageLoaded() {
   imagesLoadedCount++;
-  percentDisplay.innerHTML = Math.round((100 / imagesTotalCount) * imagesLoadedCount) + '%';
+  percentDisplay.innerHTML = 'Miracle';
 
   if (imagesLoadedCount >= imagesTotalCount) {
     setTimeout(() => {
