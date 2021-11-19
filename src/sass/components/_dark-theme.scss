@@ -85,13 +85,9 @@ body.dark-theme {
 
 //======Switcher======//
 .toolbar {
-    margin-top: 46px;
     display: flex;
     justify-content: flex-end;
     top: 180px;
-    @media screen and (min-width: $tablet-min-size) {
-        margin-top: 41px;
-      }
 }
 .theme-switch {
     display: flex;
