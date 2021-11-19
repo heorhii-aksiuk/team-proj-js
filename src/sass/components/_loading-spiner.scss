@@ -1,6 +1,5 @@
 .preloader {
-  background: rgba(255, 255, 255, 0.9);
-  //background-image: url(../images/header-img/header-library-tablet-img.jpg);
+  background: $backdrop-bg-color;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -9,15 +8,15 @@
   top: 0;
   left: 0;
   z-index: 777;
-  transition: 1000ms all;
+  transition: 500ms all;
   opacity: 1;
   visibility: visible;
   &__loader {
-    width: 120px;
-    height: 120px;
-    border: 10px solid rgb(185, 185, 185);
+    width: 100px;
+    height: 100px;
+    border: 10px solid $grey-color;
     border-radius: 50%;
-    border-top-color: #ff6b01;
+    border-top-color: $orange-color;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30,8 +29,9 @@
     justify-content: center;
     width: 50px;
     height: 50px;
-    color: #ff6b01;
+    color: $orange-color;
     font-size: 30px;
+    font-weight: 500;
     position: absolute;
     top: 50%;
     left: 50%;
