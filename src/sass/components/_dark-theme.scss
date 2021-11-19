@@ -21,6 +21,10 @@ body.dark-theme {
         background-color: $dark-footer-bg-color;
         border: 1px solid $grey-color;
     }
+    & .pagination__btn-arrows:hover,
+    & .pagination__btn-arrows:focus {
+        border: 1px solid $dark-orange-color;
+    }
     & .pagination__svg {
         fill: $dark-orange-color;
     }

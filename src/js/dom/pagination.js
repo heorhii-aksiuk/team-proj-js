@@ -12,6 +12,7 @@ import {
   nextDotsLiEl,
   lastPageBtnEl,
   nextPageBtnEl,
+  mainCardListEl
 } from '../refs';
 
 import { showAllFilms } from './show-all-films'
@@ -142,10 +143,12 @@ function hiddeMinusButtons() {
 
 export function paginationHidde() {
   paginationEl.classList.add('hidden')
+  mainCardListEl.classList.add('when-hide-pagination')
 }
 
 export function paginationShow() {
   currentPage = 1;
   startPaginationSetup();
   paginationEl.classList.remove('hidden');
+  mainCardListEl.classList.remove('when-hide-pagination')
 }

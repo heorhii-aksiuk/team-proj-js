@@ -10,6 +10,7 @@ const libraryWatchedBtn = document.querySelector('.library-watched-btn');
 libraryWatchedBtn.addEventListener('click', e => {
   localStorage.setItem('watchedActive', true)
   localStorage.setItem('queueActive', false)
+  localStorage.setItem('searching', false);
   renderWatchedFilms();
   addActiveColorLibraryWBtn();
   removeActiveColorLibraryQBtn();

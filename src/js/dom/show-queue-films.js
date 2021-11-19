@@ -6,8 +6,9 @@ import { addActiveColorLibraryQBtn, removeActiveColorLibraryWBtn } from '../dom/
 
 const libraryQueueBtn = document.querySelector('.library-queue-btn');
 libraryQueueBtn.addEventListener('click', e => {
-  localStorage.setItem('queueActive', true)
-  localStorage.setItem('watchedActive', false)
+  localStorage.setItem('queueActive', true);
+  localStorage.setItem('watchedActive', false);
+  localStorage.setItem('searching', false);
   renderQueueFilms();
   addActiveColorLibraryQBtn();
   removeActiveColorLibraryWBtn();
