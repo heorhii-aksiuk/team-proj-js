@@ -18,7 +18,7 @@ export function renderQueueFilms() {
   let localStorageData = JSON.parse(localStorage.getItem('filmsQueue'));
   if (localStorageData === null || localStorageData.length === 0) {
     mainCardListEl.innerHTML =
-      '<p style="margin:0 auto; padding-bottom:300px">The list is empty. Please, add queue films</p>';
+      '<p style="margin:0 auto">The list is empty. Please, add queue films</p>';
   } else {
     mainCardListEl.innerHTML = ''
     localStorageData.forEach(e => {
