@@ -85,12 +85,13 @@ body.dark-theme {
 
 //======Switcher======//
 .toolbar {
+    margin-top: 46px;
     display: flex;
     justify-content: flex-end;
-    padding: 16px 24px;
-    position: absolute;
-    right: 0;
     top: 180px;
+    @media screen and (min-width: $tablet-min-size) {
+        margin-top: 41px;
+      }
 }
 .theme-switch {
     display: flex;
@@ -100,10 +101,11 @@ body.dark-theme {
     color: $dark-text-color;
     height: 15px;
     width: 15px;
-    margin-right: 8px;
     margin-left: 8px;
 }
-  
+.theme-switch__icon:not(:last-child){
+    margin-right: 8px;
+} 
 .theme-switch__control {
     display: flex;
     align-items: center;
