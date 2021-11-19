@@ -1,4 +1,8 @@
 .collection {
+  min-height: calc(100vh - 330px);
+  @media screen and (min-width: $tablet-min-size) {
+    min-height: calc(100vh - 307px);
+  }
   &__list {
     padding-top: 20px;
     @media screen and (min-width: $tablet-min-size) {
