@@ -28,30 +28,33 @@ function pagination(totalPages, showFilmsFunction) {
   lastPage = totalPages;
   startPaginationSetup();
 
-  paginationListEl.addEventListener('click', changePage);
+  paginationListEl.addEventListener('click', onNumberClick);
   previousPageBtnEl.addEventListener('click', previousPage);
   nextPageBtnEl.addEventListener('click', nextPage);
 
-  function changePage(event) {
+  function onNumberClick(event) {
     if (+event.target.textContent > 0) currentPage = +event.target.textContent;
     if (currentPage > lastPage) return;
-    buttonsShow();
-    showFilmsFunction(currentPage);
+    changePage(showFilmsFunction);
   }
 
   function nextPage() {
     if (currentPage === lastPage) return;
     currentPage += 1;
-    buttonsShow();
-    showFilmsFunction(currentPage);
+    changePage(showFilmsFunction);
   }
 
   function previousPage() {
     if (currentPage <= 1) return;
     currentPage -= 1;
-    buttonsShow();
-    showFilmsFunction(currentPage);
+    changePage(showFilmsFunction);
   }
+}
+
+function changePage(showFilmsFunction) {
+  document.documentElement.scrollTop = 0;
+  buttonsShow();
+  showFilmsFunction(currentPage);
 }
 
 function startPaginationSetup() {
