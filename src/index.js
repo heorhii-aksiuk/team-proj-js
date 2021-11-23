@@ -14,5 +14,3 @@ import './js/dom/show-watched-films';
 import './js/dom/show-queue-films';
 import './js/storage/dark-theme-ls';
 import './js/dom/modal-error';
-
-
