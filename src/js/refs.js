@@ -32,6 +32,7 @@ const refs = {
   libraryQueueBtn: document.querySelector('.library-queue-btn'),
   modalCloseBtn: document.querySelector('.close-btn'),
   footerEl: document.querySelector('.footer'),
+  upBtnEl: document.getElementById('up-btn'),
 };
 
 export const {
@@ -68,4 +69,5 @@ export const {
   libraryQueueBtn,
   modalCloseBtn,
   footerEl,
+  upBtnEl,
 } = refs;
