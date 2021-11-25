@@ -9,18 +9,16 @@
 @import './components/pagination';
 @import './components/backdrop';
 @import './components/loading-spiner';
-@import './components/modal-window-group-information';
-@import './components/dark-theme';
 
 @import './layout/header';
 @import './layout/main-section';
 @import './layout/footer';
 
 @import './layout/modal-film-info';
+@import './layout/modal-window-group-information';
 @import './layout/modal-error';
 
-
-
+@import './themes/dark-theme';
 @import './layout/up-arrow';
 
 
